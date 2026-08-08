@@ -36,6 +36,8 @@ describe('Vectra alpha catalog', () => {
     const result = index.search('SYN-VB-BRAKE-F-01');
     const blocked = result.hits.filter((h) => h.confidence === 'do-not-advise');
     expect(blocked.length).toBeGreaterThan(0);
-    expect(blocked[0]?.warnings.join(' ')).toMatch(/Safety-critical|blocked|Synthetic|do not treat/i);
+    expect(blocked[0]?.warnings.join(' ')).toMatch(
+      /Categoria de segurança|bloqueada|sintético|não use/i
+    );
   });
 });

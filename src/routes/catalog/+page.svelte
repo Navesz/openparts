@@ -6,58 +6,55 @@
     listParts,
     getVehicles
   } from '$lib/search';
+  import { categoryImage, vehicleImage } from '$lib/media';
+  import { pt } from '$lib/i18n/pt';
 
   const name = getCatalogName();
   const description = getCatalogDescription();
   const parts = listParts();
   const edges = listEquivalences();
   const vehicles = getVehicles();
+  const t = pt.catalog;
+
+  function categoryLabel(category: string): string {
+    return (pt.categories as Record<string, string>)[category] ?? category;
+  }
 </script>
 
 <main class="shell">
   <section class="hero">
-    <h1 class="brand">Catalog</h1>
+    <h1 class="brand">{t.title}</h1>
     <p class="lede">{name}: {description}</p>
   </section>
 
   <section class="panel">
-    <h2>Parts ({parts.length})</h2>
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th>Code</th>
-            <th>Label</th>
-            <th>Category</th>
-            <th>Safety</th>
-            <th>Vehicles</th>
-          </tr>
-        </thead>
-        <tbody>
-          {#each parts as p}
-            <tr>
-              <td class="mono">{p.code}</td>
-              <td>{p.label}</td>
-              <td>{p.category}</td>
-              <td>{p.safetyClass}</td>
-              <td class="mono">{p.fitsVehicleIds.join(', ')}</td>
-            </tr>
-          {/each}
-        </tbody>
-      </table>
+    <h2>{t.parts} ({parts.length})</h2>
+    <div class="parts-grid">
+      {#each parts as p}
+        <article class="part-card">
+          <img src={categoryImage(p.category)} alt="" width="48" height="48" />
+          <div>
+            <strong class="mono">{p.code}</strong>
+            <div>{p.label}</div>
+            <div class="meta">
+              {categoryLabel(p.category)} · {p.safetyClass}
+            </div>
+          </div>
+        </article>
+      {/each}
     </div>
   </section>
 
   <section class="panel" style="margin-top:1rem;">
-    <h2>Equivalences ({edges.length})</h2>
+    <h2>{t.equivalences} ({edges.length})</h2>
     <div class="table-wrap">
       <table>
         <thead>
           <tr>
-            <th>From</th>
-            <th>To</th>
-            <th>Confidence</th>
-            <th>Reason</th>
+            <th>{t.from}</th>
+            <th>{t.to}</th>
+            <th>{t.confidence}</th>
+            <th>{t.reason}</th>
           </tr>
         </thead>
         <tbody>
@@ -75,12 +72,15 @@
   </section>
 
   <section class="vehicles">
-    <h2>Vehicles</h2>
-    {#each vehicles as v}
-      <article class="panel vehicle">
-        <strong>{v.id}</strong>
-        <p>{v.notes}</p>
-      </article>
-    {/each}
+    <h2>{t.vehicles}</h2>
+    <div class="vehicle-grid">
+      {#each vehicles as v}
+        <article class="panel vehicle">
+          <img class="vehicle-art" src={vehicleImage(v.generation)} alt="" />
+          <strong>{v.id}</strong>
+          <p>{v.notes}</p>
+        </article>
+      {/each}
+    </div>
   </section>
 </main>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 280" role="img" aria-label="Silhueta Vectra geração B">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d7e4dc"/>
+      <stop offset="100%" stop-color="#9bb5a4"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="280" fill="#f3efe6"/>
+  <ellipse cx="320" cy="230" rx="250" ry="18" fill="#c9d2cb" opacity=".7"/>
+  <path d="M70 180 C120 120 180 95 250 90 L390 88 C470 90 520 120 560 160 L585 180 L585 200 C520 210 430 215 320 215 C210 215 120 208 70 198 Z" fill="url(#g)" stroke="#073528" stroke-width="3"/>
+  <path d="M210 92 L250 55 L360 52 L410 90" fill="#eef5f0" stroke="#073528" stroke-width="3"/>
+  <circle cx="170" cy="200" r="34" fill="#1c241f"/>
+  <circle cx="170" cy="200" r="16" fill="#8aa193"/>
+  <circle cx="470" cy="200" r="34" fill="#1c241f"/>
+  <circle cx="470" cy="200" r="16" fill="#8aa193"/>
+  <text x="40" y="40" font-family="Georgia, serif" font-size="28" fill="#073528">Vectra B</text>
+</svg>
