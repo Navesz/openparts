@@ -207,8 +207,49 @@ button.secondary {
   border-left: 4px solid var(--brand);
 }
 
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tools {
+  margin-top: 1rem;
+}
+
+.notes {
+  margin-top: 1rem;
+}
+
+textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 0.7rem;
+  padding: 0.75rem 0.85rem;
+  background: #fff;
+  color: var(--ink);
+  resize: vertical;
+  font: inherit;
+}
+
+.file-btn {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 0.7rem;
+  padding: 0.8rem 1.1rem;
+  border: 1px solid var(--line);
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--brand-ink);
+}
+
+.file-btn input {
+  display: none;
+}
+
 @media (max-width: 800px) {
   .controls {
     grid-template-columns: 1fr;
   }
 }
+
