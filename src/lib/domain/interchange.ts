@@ -139,11 +139,11 @@ export class InterchangeIndex {
 
         const edges = this.edgesFrom.get(part.id) ?? [];
         for (const edge of edges) {
-          if (CONFIDENCE_RANK[edge.confidence] < minRank) continue;
           const other = this.partsById.get(edge.toPartId);
           if (!other) continue;
           if (opts?.vehicleId && !other.fitsVehicleIds.includes(opts.vehicleId)) continue;
 
+          // Always surface safety refusals; never hide them behind minConfidence.
           if (edge.confidence === 'do-not-advise') {
             hits.push({
               part: other,
@@ -155,6 +155,8 @@ export class InterchangeIndex {
             });
             continue;
           }
+
+          if (CONFIDENCE_RANK[edge.confidence] < minRank) continue;
 
           hits.push({
             part: other,
