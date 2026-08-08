@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://navesz.github.io/openparts/schemas/oparts-project.schema.json",
+  "title": "Open Parts local project notes",
+  "type": "object",
+  "required": ["schemaVersion", "kind", "savedAt", "query", "vehicleId", "notes"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "kind": { "const": "openparts-project" },
+    "savedAt": { "type": "string" },
+    "query": { "type": "string" },
+    "vehicleId": { "type": "string" },
+    "notes": { "type": "string" },
+    "lastResultStatus": {
+      "type": "string",
+      "enum": ["ok", "empty", "unknown-code", "blocked"]
+    }
+  }
+}

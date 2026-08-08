@@ -15,3 +15,15 @@ export function runSearch(query: string, vehicleId?: string): SearchResult {
 export function getCatalogName(): string {
   return alphaCatalog.name;
 }
+
+export function getCatalogDescription(): string {
+  return alphaCatalog.description;
+}
+
+export function listParts() {
+  return alphaCatalog.parts;
+}
+
+export function listEquivalences() {
+  return alphaCatalog.equivalences;
+}
