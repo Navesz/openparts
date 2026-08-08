@@ -30,4 +30,8 @@ You are building **Open Parts**: local-first Chevrolet Vectra parts interchange
 ## Session goal
 
 Keep executing objectives in order for as long as this session allows.
-There is no separate credit variable; persistence is OBJECTIVES + Issues + this rule.
+Do not stop to ask for permission between slices.
+Before context may die: update `docs/HANDOFF.md` (compact memory), then commit.
+Stop only when objectives are done, `auto_continue: false`, or credits end.
+Hooks in `.cursor/hooks.json` reinject HANDOFF on sessionStart and may wake on stop.
+
