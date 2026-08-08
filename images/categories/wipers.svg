@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Limpadores">
+  <rect width="128" height="128" rx="24" fill="#e8eef8"/>
+  <path d="M30 90 L64 30 L98 90" fill="none" stroke="#294a7a" stroke-width="8" stroke-linecap="round"/>
+  <path d="M64 30 L64 96" stroke="#294a7a" stroke-width="6" stroke-linecap="round"/>
+</svg>
