@@ -33,9 +33,11 @@ When this chat or a later agent resumes Open Parts:
 1. Read this file and [ROADMAP.md](ROADMAP.md).
 2. Pick the first objective that is not `done`.
 3. Implement the smallest slice that advances exit evidence.
-4. Update the status table in this file.
-5. Open or close the matching GitHub issue when the remote repo exists.
-6. Stop only when all objectives are `done` or the user interrupts.
+4. Commit incrementally after each meaningful slice.
+5. Update the status table in this file.
+6. Open or close the matching GitHub issue when the remote repo exists.
+7. Do not pause for user approval between objectives.
+8. Stop only when all objectives are `done` or the session/credits end.
 
 There is **no** magic credit variable inside Cursor. Persistence = this file +
 GitHub Issues + `.cursor/rules` + `AGENTS.md`. Keep executing objectives in order

@@ -5,7 +5,7 @@ import { describe, expect, it } from 'vitest';
 import { assertCatalog, loadIndex, searchCatalog } from './catalog';
 import type { CatalogDocument } from './types';
 
-const root = join(dirname(fileURLToPath(import.meta.url)), '../../../..');
+const root = join(dirname(fileURLToPath(import.meta.url)), '../../..');
 const fixturePath = join(root, 'data/fixtures/vectra/alpha.catalog.json');
 
 function loadFixture(): CatalogDocument {
@@ -36,6 +36,6 @@ describe('Vectra alpha catalog', () => {
     const result = index.search('SYN-VB-BRAKE-F-01');
     const blocked = result.hits.filter((h) => h.confidence === 'do-not-advise');
     expect(blocked.length).toBeGreaterThan(0);
-    expect(blocked[0]?.warnings.join(' ')).toMatch(/segurança|security|bloqueada|blocked|Safety/i);
+    expect(blocked[0]?.warnings.join(' ')).toMatch(/Safety-critical|blocked|Synthetic|do not treat/i);
   });
 });
