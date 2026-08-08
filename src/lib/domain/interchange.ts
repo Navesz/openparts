@@ -22,17 +22,17 @@ function safetyWarnings(part: PartNode, confidence: Confidence): string[] {
   const warnings: string[] = [];
   if (part.safetyClass === 'safety-critical') {
     warnings.push(
-      'Categoria de segurança: não use este resultado como autorização de instalação.'
+      'Safety-critical category: do not treat this result as installation authorization.'
     );
   }
   if (confidence === 'synthetic') {
-    warnings.push('Dado sintético de demonstração — não é um código OEM real.');
+    warnings.push('Synthetic demo data — not a real OEM code.');
   }
   if (confidence === 'do-not-advise') {
-    warnings.push('Equivalência bloqueada por política de segurança do Open Parts.');
+    warnings.push('Equivalence blocked by Open Parts safety policy.');
   }
   if (confidence === 'community-proposed') {
-    warnings.push('Proposta comunitária ainda não curada.');
+    warnings.push('Community proposal awaiting curator review.');
   }
   return warnings;
 }
@@ -85,7 +85,7 @@ export class InterchangeIndex {
     const query = rawQuery.trim();
     const messages: string[] = [];
     if (!query) {
-      return { query, status: 'empty', hits: [], messages: ['Informe um código ou trecho.'] };
+      return { query, status: 'empty', hits: [], messages: ['Enter a part code or search text.'] };
     }
 
     const minRank = CONFIDENCE_RANK[opts?.minConfidence ?? 'synthetic'];
@@ -108,7 +108,7 @@ export class InterchangeIndex {
             part,
             matchedVia: 'exact-code',
             confidence: 'synthetic',
-            reason: 'Correspondência parcial por texto no catálogo demo.',
+            reason: 'Partial text match inside the demo catalog.',
             warnings: safetyWarnings(part, 'synthetic')
           });
         }
@@ -119,21 +119,21 @@ export class InterchangeIndex {
           status: 'unknown-code',
           hits: [],
           messages: [
-            'Nenhuma peça encontrada neste catálogo alpha. Open Parts não inventa equivalências.'
+            'No part found in this alpha catalog. Open Parts does not invent equivalences.'
           ]
         };
       }
     } else {
       for (const part of direct) {
         if (opts?.vehicleId && !part.fitsVehicleIds.includes(opts.vehicleId)) {
-          messages.push(`Peça ${part.code} existe, mas não está ligada ao veículo filtrado.`);
+          messages.push(`Part ${part.code} exists, but is not linked to the selected vehicle filter.`);
           continue;
         }
         hits.push({
           part,
           matchedVia: 'exact-code',
           confidence: 'curated',
-          reason: 'Código encontrado diretamente no catálogo carregado.',
+          reason: 'Code found directly in the loaded catalog.',
           warnings: safetyWarnings(part, 'curated')
         });
 
