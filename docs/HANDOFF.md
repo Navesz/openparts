@@ -25,21 +25,18 @@ alpha_scope: Chevrolet Vectra BR only
 ## Done so far
 
 - OSS governance docs + AGENTS + OBJECTIVES + SAFETY/VALIDATION
-- Domain engine: `src/lib/domain/{types,interchange,catalog}.ts` + tests
-- Synthetic Vectra fixture: `data/fixtures/vectra/alpha.catalog.json`
-- Early SvelteKit UI draft: `src/routes/+page.svelte`, `app.css`, `app.html`
-- Commits: `52cba46` bootstrap, `7b72f43` fixtures/tests, `9d7e2bc` rename to Open Parts
-
+- Domain engine + synthetic Vectra fixture + tests green
+- SvelteKit UI draft; `npm install` / typecheck / `npm run build` succeed
+- Continuity hooks + HANDOFF
+- Commits through safety-filter fix
 ## Next actions (ordered)
 
-1. Finish npm install + make `npm run test:run` and `npm run build` pass
-2. Polish runnable search UI (confidence badges, unknown-code honesty)
-3. Add `.github` Issue/PR templates + CI workflow
-4. Create public GitHub repo `openparts`, open milestone issues, push
-5. GitHub Pages demo when build is green
-6. Update `docs/VALIDATION_REPORT.md` with measured commands
-7. Mark objectives O1–O7 in `docs/OBJECTIVES.md` as done with evidence
-
+1. Polish runnable search UI and `.oparts.json` import/export
+2. Add `.github` Issue/PR templates + CI workflow
+3. Create public GitHub repo `openparts`, open milestone issues, push
+4. GitHub Pages demo when CI is green
+5. Update `docs/VALIDATION_REPORT.md` with measured commands
+6. Mark objectives O1-O7 done with evidence
 ## Blockers
 
 - `pnpm`/corepack EPERM on this machine → use **npm**
