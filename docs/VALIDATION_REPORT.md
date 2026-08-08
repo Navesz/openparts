@@ -8,6 +8,7 @@ Status: **alpha measured**
 | Typecheck        | `npm run typecheck`                          | 0 errors               | 2026-08-08 |
 | Production build | `npm run build`                              | `build/` OK            | 2026-08-08 |
 | Pages build      | `$env:BASE_PATH="/openparts"; npm run build` | deployed to `gh-pages` | 2026-08-08 |
+| Cross-ref UX     | applications + Family I/II fixture + Fontes  | O8/O9 done on main     | 2026-08-08 |
 | Live demo        | https://navesz.github.io/openparts/          | enabled                | 2026-08-08 |
 
 No fitment accuracy claim is authorized by this report. Demo codes are synthetic (`SYN-*`).

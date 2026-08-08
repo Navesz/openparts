@@ -14,19 +14,21 @@ Work top-down. Do not invent OEM part numbers.
 
 ## Objective board
 
-| ID  | Status      | Objective                                  | Exit evidence                                                                 |
-| --- | ----------- | ------------------------------------------ | ----------------------------------------------------------------------------- |
-| O1  | done        | OSS foundation                             | LICENSE, CoC, CONTRIBUTING, SECURITY, GOVERNANCE, SUPPORT, README EN/PT       |
-| O2  | done        | Reproducible SvelteKit + TypeScript app    | `npm run test:run` + `npm run build` pass                                     |
-| O3  | done        | Versioned interchange schema + Vectra seed | `packages/schemas/*` + `data/fixtures/vectra/alpha.catalog.json`              |
-| O4  | done        | Deterministic search engine                | 6 unit tests incl. unknown-code + do-not-advise                               |
-| O5  | done        | Runnable browser alpha                     | Search/Catalog/About + `.oparts.json`                                         |
-| O6  | done        | GitHub project hygiene                     | https://github.com/Navesz/openparts + Issues M0–M4 + Pages demo               |
-| O7  | done        | Safety & validation docs                   | SAFETY, VALIDATION, VALIDATION_REPORT measured                                |
-| O8  | done        | Cross-reference UX (batida)                | applications on hits + Plataformas/Fontes + multi-vehicle Family I/II fixture |
-| O9  | in_progress | Curated public-history notes (no scrape)   | More redistributable narrative edges with provenance URLs                     |
+| ID  | Status | Objective                                  | Exit evidence                                                                 |
+| --- | ------ | ------------------------------------------ | ----------------------------------------------------------------------------- |
+| O1  | done   | OSS foundation                             | LICENSE, CoC, CONTRIBUTING, SECURITY, GOVERNANCE, SUPPORT, README EN/PT       |
+| O2  | done   | Reproducible SvelteKit + TypeScript app    | `npm run test:run` + `npm run build` pass                                     |
+| O3  | done   | Versioned interchange schema + Vectra seed | `packages/schemas/*` + `data/fixtures/vectra/alpha.catalog.json`              |
+| O4  | done   | Deterministic search engine                | 6 unit tests incl. unknown-code + do-not-advise                               |
+| O5  | done   | Runnable browser alpha                     | Search/Catalog/About + `.oparts.json`                                         |
+| O6  | done   | GitHub project hygiene                     | https://github.com/Navesz/openparts + Issues M0–M4 + Pages demo               |
+| O7  | done   | Safety & validation docs                   | SAFETY, VALIDATION, VALIDATION_REPORT measured                                |
+| O8  | done   | Cross-reference UX (batida)                | applications on hits + Plataformas/Fontes + multi-vehicle Family I/II fixture |
+| O9  | done   | Curated public-history notes (no scrape)   | `docs/PUBLIC_HISTORY.md` + public-article edge + Fontes link                  |
+| O10 | done   | Family I synthetic applications + caveats  | Family I thermo/coil/O2 apps + EFI/MPFI note in UI                            |
 
 ## Agent continuation contract
 
 When all board objectives are `done` and no user expansion is pending,
-set `auto_continue: false` in `docs/HANDOFF.md`.
+set `auto_continue: false` in `docs/HANDOFF.md`. Unless the user asks to expand,
+prefer small polish (a11y/docs) over inventing new OEM scope.

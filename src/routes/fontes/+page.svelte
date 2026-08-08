@@ -64,8 +64,9 @@
     </ul>
 
     <div class="banner" role="note">
-      Open Parts não faz scraping desses sites para o repositório. Se quiser contribuir com uma
-      equivalência, abra PR com proveniência redistribuível e código verificado — nunca invente OEM.
+      Open Parts não faz scraping desses sites para o repositório. Notas de história
+      pública curadas ficam em docs/PUBLIC_HISTORY.md. Para contribuir com
+      equivalência: PR com proveniência redistribuível — nunca invente OEM.
     </div>
   </section>
 </main>

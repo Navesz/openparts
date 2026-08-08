@@ -25,6 +25,9 @@ export const pt = {
     probeBrake: 'Testar recusa de freio',
     tryFamily2: 'Demo Família II (óleo)',
     tryFamily1: 'Demo Família I (termostato)',
+    tryFamily1O2: 'Demo Família I (O2)',
+    efiNote:
+      'Lembrete: EFI (um bico) e MPFI (quatro bicos) não compartilham coletores/módulos — o demo só ilustra narrativa de plataforma.',
     saveProject: 'Salvar .oparts.json',
     loadProject: 'Carregar .oparts.json',
     notesLabel: 'Notas locais (só no seu .oparts.json)',

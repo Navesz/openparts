@@ -40,6 +40,15 @@ describe('Vectra alpha catalog', () => {
     expect(hit?.applications.some((v) => v.model === 'Astra')).toBe(true);
   });
 
+  it('lists Family I applications for thermostat demo', () => {
+    const index = loadIndex(loadFixture());
+    const result = index.search('SYN-FAMILY1-THERMO-01');
+    expect(result.status).toBe('ok');
+    const hit = result.hits[0];
+    expect(hit?.applications.some((v) => v.model === 'Celta')).toBe(true);
+    expect(hit?.applications.some((v) => v.model === 'Prisma')).toBe(true);
+  });
+
   it('surfaces do-not-advise brake equivalence instead of silent success', () => {
     const index = loadIndex(loadFixture());
     const result = index.search('SYN-VB-BRAKE-F-01');
