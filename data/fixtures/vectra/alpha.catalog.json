@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 1,
+  "name": "vectra-br-alpha-synthetic",
+  "description": "Synthetic Chevrolet Vectra (Brazil) demo catalog. Codes are NOT real OEM numbers. Platform notes cite public history only.",
+  "vehicles": [
+    {
+      "id": "vectra-b-br",
+      "make": "Chevrolet",
+      "model": "Vectra",
+      "generation": "B",
+      "market": "BR",
+      "years": "1996-2005",
+      "notes": "Brazilian Vectra B era, commonly associated with Opel Vectra B engineering heritage.",
+      "relatedPlatformNotes": [
+        "Public automotive history links Vectra B branding across Opel/Vauxhall/Holden/Chevrolet markets with local emblem/grille differences.",
+        "Alpha scope stays informational; do not treat sibling-market cars as automatic bolt-on fitment."
+      ],
+      "sources": [
+        {
+          "kind": "public-article",
+          "summary": "Motor1 feature on Brazilian Vectra lineage and Opel-era context",
+          "url": "https://motor1.uol.com.br/features/777248/historia-ultimo-chevrolet-vectra-brasil/",
+          "accessed": "2026-08-08"
+        }
+      ]
+    },
+    {
+      "id": "vectra-c-br",
+      "make": "Chevrolet",
+      "model": "Vectra",
+      "generation": "C",
+      "market": "BR",
+      "years": "2006-2011",
+      "notes": "Brazilian 'Novo Vectra' is not the European Vectra C; public sources describe Zafira-related underpinnings and Astra-inspired bodywork.",
+      "relatedPlatformNotes": [
+        "Public reporting describes shared cabin controls/air vents with contemporary Chevrolet models such as Astra/Meriva families.",
+        "Family II engine lineage is widely discussed as shared across several GM Brazil models of the era — still not a per-SKU fitment proof."
+      ],
+      "sources": [
+        {
+          "kind": "public-article",
+          "summary": "Motor1 / Wikipedia summaries of Brazilian Vectra III platform story",
+          "url": "https://pt.wikipedia.org/wiki/Chevrolet_Vectra",
+          "accessed": "2026-08-08"
+        }
+      ]
+    }
+  ],
+  "parts": [
+    {
+      "id": "syn-cabin-filter-b",
+      "code": "SYN-VB-CABIN-01",
+      "brand": "OpenPartLine Demo",
+      "label": "Cabin filter (demo)",
+      "category": "filter",
+      "safetyClass": "wear-item",
+      "fitsVehicleIds": ["vectra-b-br"],
+      "notes": "Synthetic demo SKU for UI and tests."
+    },
+    {
+      "id": "syn-cabin-filter-c",
+      "code": "SYN-VC-CABIN-01",
+      "brand": "OpenPartLine Demo",
+      "label": "Cabin filter (demo, gen C packaging)",
+      "category": "filter",
+      "safetyClass": "wear-item",
+      "fitsVehicleIds": ["vectra-c-br"],
+      "notes": "Synthetic alternate packaging code used to demo equivalence edges."
+    },
+    {
+      "id": "syn-oil-filter-shared",
+      "code": "SYN-FAMILY2-OIL-01",
+      "brand": "OpenPartLine Demo",
+      "label": "Oil filter demo for Family II narrative",
+      "category": "filter",
+      "safetyClass": "wear-item",
+      "fitsVehicleIds": ["vectra-b-br", "vectra-c-br"],
+      "notes": "Synthetic node illustrating shared-engine storytelling — not a real OEM interchange."
+    },
+    {
+      "id": "syn-brake-pad-front",
+      "code": "SYN-VB-BRAKE-F-01",
+      "brand": "OpenPartLine Demo",
+      "label": "Front brake pad set (demo)",
+      "category": "brakes",
+      "safetyClass": "safety-critical",
+      "fitsVehicleIds": ["vectra-b-br"]
+    },
+    {
+      "id": "syn-brake-pad-alt",
+      "code": "SYN-VB-BRAKE-F-ALT",
+      "brand": "OpenPartLine Demo",
+      "label": "Front brake pad set alternate box (demo)",
+      "category": "brakes",
+      "safetyClass": "safety-critical",
+      "fitsVehicleIds": ["vectra-b-br"]
+    }
+  ],
+  "equivalences": [
+    {
+      "id": "eq-cabin-b-c-demo",
+      "fromPartId": "syn-cabin-filter-b",
+      "toPartId": "syn-cabin-filter-c",
+      "confidence": "synthetic",
+      "reason": "Demo-only packaging alias to exercise cross-generation search UI. Not a real B↔C cabin-filter claim.",
+      "bidirectional": true,
+      "provenance": {
+        "kind": "synthetic-demo",
+        "summary": "Invented for OpenPartLine alpha fixtures",
+        "accessed": "2026-08-08"
+      }
+    },
+    {
+      "id": "eq-oil-self-note",
+      "fromPartId": "syn-oil-filter-shared",
+      "toPartId": "syn-cabin-filter-b",
+      "confidence": "do-not-advise",
+      "reason": "Intentionally invalid cross-category link to prove the engine blocks unsafe advice paths.",
+      "bidirectional": false,
+      "provenance": {
+        "kind": "synthetic-demo",
+        "summary": "Negative fixture for safety policy tests",
+        "accessed": "2026-08-08"
+      }
+    },
+    {
+      "id": "eq-brake-blocked",
+      "fromPartId": "syn-brake-pad-front",
+      "toPartId": "syn-brake-pad-alt",
+      "confidence": "do-not-advise",
+      "reason": "Safety-critical brake equivalence is refused in alpha unless a curated source exists.",
+      "bidirectional": true,
+      "provenance": {
+        "kind": "curator-note",
+        "summary": "OpenPartLine safety policy default for brakes in alpha",
+        "accessed": "2026-08-08"
+      }
+    }
+  ]
+}
