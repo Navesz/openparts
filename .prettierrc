@@ -1,0 +1,9 @@
+{
+  "name": "openpeca",
+  "private": true,
+  "version": 1,
+  "numberingSystem": {
+    "format": "digit",
+    "precision": 3
+  }
+}

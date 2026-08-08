@@ -1,0 +1,33 @@
+---
+description: OpenPartLine persistent objectives and anti-hallucination contract
+alwaysApply: true
+---
+
+# OpenPartLine agent contract
+
+You are building **OpenPartLine**: local-first Chevrolet Vectra parts interchange
+(open source), mirroring OpenKartLine quality (governance, CI, evidence, safety).
+
+## Before coding
+
+1. Read `docs/OBJECTIVES.md` and `docs/ROADMAP.md`.
+2. Continue the first objective that is not `done`.
+3. Do not invent OEM/aftermarket part numbers or fitment claims.
+
+## While coding
+
+- Keep domain logic framework-free.
+- Label synthetic data as synthetic.
+- Never show failed/unknown lookup as success.
+- Safety-critical categories need explicit curated evidence or `do-not-advise`.
+
+## After a meaningful slice
+
+- Update `docs/OBJECTIVES.md` status.
+- Add/adjust tests and CHANGELOG when user-visible.
+- Prefer shipping a narrow runnable alpha over expanding to all GM cars.
+
+## Session goal
+
+Keep executing objectives in order for as long as this session allows.
+There is no separate credit variable; persistence is OBJECTIVES + Issues + this rule.
