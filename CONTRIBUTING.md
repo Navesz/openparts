@@ -1,4 +1,4 @@
-# Contributing to OpenPartLine
+# Contributing to Open Parts
 
 Thanks for helping make parts interchange understandable and honest.
 Contributions are welcome in English or Brazilian Portuguese.
@@ -15,19 +15,18 @@ Contributions are welcome in English or Brazilian Portuguese.
 See [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md). Short path:
 
 ```bash
-git clone https://github.com/Navesz/OpenPartLine.git
-cd OpenPartLine
+git clone https://github.com/Navesz/openparts.git
+cd openparts
 corepack enable
 pnpm install --frozen-lockfile
-uv sync --locked --all-extras --dev
 pnpm test:run
-uv run pytest
+pnpm check
 ```
 
 ## Engineering rules
 
 - Never invent OEM or aftermarket codes.
-- Domain/search code must not depend on React or HTTP.
+- Domain/search code must not depend on UI frameworks or HTTP.
 - Every fixture edge needs confidence, provenance, and reason.
 - Failed lookups must not look successful.
 - Add dependencies only with license/provenance notes in THIRD_PARTY.md.

@@ -1,4 +1,4 @@
-# OpenPartLine
+# Open Parts
 
 > Laboratório open source e local-first de equivalência de peças do Chevrolet Vectra.
 
@@ -7,30 +7,29 @@
 
 [Read in English](README.md) · [Roadmap](docs/ROADMAP.md) · [Objetivos](docs/OBJECTIVES.md) · [Contribuir](CONTRIBUTING.md)
 
-O OpenPartLine ajuda a explorar se um código de peça em um contexto Vectra pode
+O Open Parts ajuda a explorar se um código de peça em um contexto Vectra pode
 relacionar-se a outro — com **confiança, proveniência e limites de segurança
 explícitos**. É ferramenta de engenharia e aprendizado, não garantia de
 encaixe e não ordem de serviço.
 
-## Começo rápido
+Alpha docs and UI ship in **English first**; this file is a thin Portuguese entry.
+
+## Quick start
 
 ```bash
-git clone https://github.com/Navesz/OpenPartLine.git
-cd OpenPartLine
+git clone https://github.com/Navesz/openparts.git
+cd openparts
 corepack enable
 pnpm install
-uv sync --all-extras --dev
 pnpm dev
 ```
 
-## Regras duras
+## Hard rules
 
-- Não inventar códigos OEM/aftermarket
-- Peças de segurança começam em modo conservador (`do-not-advise`)
-- Busca falha de forma visível quando não há evidência
+- Do not invent OEM/aftermarket codes
+- Safety-critical categories start conservative (`do-not-advise`)
+- Failed lookups fail visibly
 
-Leia [Segurança](docs/SAFETY.md), [Validação](docs/VALIDATION.md) e [AGENTS.md](AGENTS.md).
-
-## Licença
+## License
 
 [Apache-2.0](LICENSE)

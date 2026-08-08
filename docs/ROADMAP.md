@@ -5,7 +5,7 @@ GitHub Issues use the same `[M0]`… prefixes (OpenKartLine pattern).
 
 ## Delivery status
 
-OpenPartLine targets a **runnable alpha** for Chevrolet Vectra interchange lookup
+Open Parts targets a **runnable alpha** for Chevrolet Vectra interchange lookup
 with explicit confidence and provenance. Broader GM coverage is explicitly out of
 alpha scope.
 
@@ -59,7 +59,7 @@ Exit criteria:
 
 - Search box + results with confidence badges
 - “Why this match” panel
-- Import/export `.opk.json`
+- Import/export `.oparts.json`
 - Explicit safety banner
 
 ## M4 — Public GitHub operations

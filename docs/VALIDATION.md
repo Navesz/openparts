@@ -1,6 +1,6 @@
 # Validation strategy
 
-OpenPartLine separates software correctness from catalog truth. Passing unit tests
+Open Parts separates software correctness from catalog truth. Passing unit tests
 does **not** prove that a part fits a car.
 
 ## Evidence layers

@@ -1,13 +1,13 @@
-# OpenPartLine
+# Open Parts
 
 > Open-source, local-first Chevrolet Vectra parts interchange lab.
 
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![Status](https://img.shields.io/badge/status-alpha-orange)](docs/ROADMAP.md)
 
-[Leia em português](README.pt-BR.md) · [Roadmap](docs/ROADMAP.md) · [Objectives](docs/OBJECTIVES.md) · [Contribute](CONTRIBUTING.md)
+[Leia em português](README.pt-BR.md) · [Roadmap](docs/ROADMAP.md) · [Objectives](docs/OBJECTIVES.md) · [Contribute](CONTRIBUTING.md) · [Naming](docs/NAMING.md)
 
-OpenPartLine helps you explore whether a part code for one Vectra context may relate
+Open Parts helps you explore whether a part code for one Vectra context may relate
 to another — with **explicit confidence, provenance, and safety limits**.
 It is an engineering and learning tool, not a fitment guarantee and not a shop
 work order.
@@ -17,43 +17,36 @@ work order.
 - Search demo fixtures by part code or vehicle generation
 - Inspect equivalence reasons and confidence badges
 - Refuse silent success on unknown codes
-- Save/reopen local `.opk.json` notes
-- Run entirely in the browser with a deterministic fallback; optional local Python API later
+- Save/reopen local `.oparts.json` notes
+- Run entirely in the browser (SvelteKit static build)
 
 ## Non-goals (alpha)
 
 - All GM/Chevrolet vehicles
-- Scraping proprietary catalogs
+- Scraping proprietary catalogs into the repository
 - Price scraping / auto-checkout
 - “Guaranteed fit” claims
 
 ## Quick start
 
 ```bash
-git clone https://github.com/Navesz/OpenPartLine.git
-cd OpenPartLine
+git clone https://github.com/Navesz/openparts.git
+cd openparts
 corepack enable
 pnpm install
-uv sync --all-extras --dev
 pnpm dev
-```
-
-In another terminal (optional API):
-
-```bash
-uv run OpenPartLine-api
 ```
 
 ## Repository map
 
 | Layer | Role |
 |---|---|
-| `apps/web` | Search UI + browser engine fallback |
-| `engine` | Deterministic interchange graph |
-| `services/api` | Thin local FastAPI boundary |
-| `packages/schemas` | Versioned JSON Schemas |
+| `src/lib/domain` | Framework-free interchange engine |
+| `src/routes` | SvelteKit search UI |
 | `data/fixtures` | Vectra fixtures with provenance |
 | `docs` | Product, safety, validation, objectives |
+
+Governance patterns follow the spirit of OpenKartLine; the **stack does not**.
 
 ## Safety and honesty
 

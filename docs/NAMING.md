@@ -1,19 +1,17 @@
 # Naming decision
 
-## Chosen name: **OpenPartLine**
-
-Parallel to [OpenKartLine](https://github.com/Navesz/openkartline): **Open** + domain + specific job.
+## Chosen name: **Open Parts**
 
 | Candidate | Why not / why |
 |---|---|
-| Open Part / OpenPart | Too generic; conflicts with everyday English; weak product signal |
-| OpenParts | Catalog-store vibe, not an interchange lab |
-| OpenInterchange | Accurate industry term, but long and abstract for a logo/URL |
-| PartBridge | Fine, less “open-source lab” identity |
-| **OpenPartLine** | Clear kinship with OpenKartLine; “line” = equivalence line across models/codes |
+| Open Part | Reads incomplete as a product name |
+| OpenPartLine | Rejected: "Line" fit OpenKartLine (racing line), not parts interchange |
+| OpenInterchange | Accurate industry term, but abstract for a logo/URL |
+| **Open Parts** | Clear, honest, easy to say; repo id `openparts` |
 
 Tagline: *local-first Chevrolet Vectra parts interchange lab*.
 
-Repo/package id: `openpartline`  
-Project files: `.opl.json`  
-Alpha language: **English first**; Brazilian Portuguese after the alpha hardens (same pattern as OpenKartLine’s EN + `README.pt-BR.md`).
+- Product name: **Open Parts**
+- Package / repo: `openparts`
+- Project files: `.oparts.json`
+- Language: English first; Brazilian Portuguese after alpha hardens

@@ -1,11 +1,11 @@
 ---
-description: OpenPartLine persistent objectives and anti-hallucination contract
+description: Open Parts persistent objectives and anti-hallucination contract
 alwaysApply: true
 ---
 
-# OpenPartLine agent contract
+# Open Parts agent contract
 
-You are building **OpenPartLine**: local-first Chevrolet Vectra parts interchange
+You are building **Open Parts**: local-first Chevrolet Vectra parts interchange
 (open source), mirroring OpenKartLine quality (governance, CI, evidence, safety).
 
 ## Before coding

@@ -1,6 +1,6 @@
 # Privacy
 
-OpenPartLine is local-first. Project notes and searches stay in the browser or local
+Open Parts is local-first. Project notes and searches stay in the browser or local
 files unless the user exports and shares them.
 
 Do not commit:

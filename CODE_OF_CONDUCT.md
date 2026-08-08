@@ -2,7 +2,7 @@
 
 ## Our pledge
 
-We pledge to make participation in OpenPartLine a harassment-free experience for
+We pledge to make participation in Open Parts a harassment-free experience for
 everyone, regardless of age, body size, visible or invisible disability,
 ethnicity, sex characteristics, gender identity and expression, level of
 experience, education, socioeconomic status, nationality, personal appearance,
@@ -24,7 +24,7 @@ OEM numbers), publishing private information, or sustained disruption.
 ## Scope
 
 This policy applies in repository activity, community spaces, and when someone
-officially represents OpenPartLine.
+officially represents Open Parts.
 
 ## Reporting and enforcement
 

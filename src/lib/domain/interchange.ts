@@ -29,7 +29,7 @@ function safetyWarnings(part: PartNode, confidence: Confidence): string[] {
     warnings.push('Dado sintético de demonstração — não é um código OEM real.');
   }
   if (confidence === 'do-not-advise') {
-    warnings.push('Equivalência bloqueada por política de segurança do OpenPartLine.');
+    warnings.push('Equivalência bloqueada por política de segurança do Open Parts.');
   }
   if (confidence === 'community-proposed') {
     warnings.push('Proposta comunitária ainda não curada.');
@@ -119,7 +119,7 @@ export class InterchangeIndex {
           status: 'unknown-code',
           hits: [],
           messages: [
-            'Nenhuma peça encontrada neste catálogo alpha. OpenPartLine não inventa equivalências.'
+            'Nenhuma peça encontrada neste catálogo alpha. Open Parts não inventa equivalências.'
           ]
         };
       }

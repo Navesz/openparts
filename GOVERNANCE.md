@@ -1,6 +1,6 @@
 # Governance
 
-OpenPartLine is maintainer-led and aims toward shared stewardship as contributors grow.
+Open Parts is maintainer-led and aims toward shared stewardship as contributors grow.
 
 ## Roles
 

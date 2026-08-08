@@ -1,10 +1,10 @@
-# AGENTS.md — OpenPartLine
+# AGENTS.md — Open Parts
 
 Instructions for coding agents working in this repository.
 
 ## Product
 
-OpenPartLine is a **local-first**, open-source Chevrolet parts interchange lab.
+Open Parts is a **local-first**, open-source Chevrolet parts interchange lab.
 Alpha scope is **Chevrolet Vectra (Brazil-focused platform family)** only.
 It is an engineering/education tool, not a workshop work order and not a
 guarantee that a part will fit or is safe.

@@ -5,7 +5,7 @@
 Make cross-compatible car parts understandable for people who do not have a
 dealership EPC subscription — starting with Chevrolet Vectra.
 
-OpenPartLine turns a part code or vehicle context into an **explainable** list of
+Open Parts turns a part code or vehicle context into an **explainable** list of
 possible equivalences, with confidence and sources. It does not sell parts and
 does not promise fitment.
 
@@ -22,7 +22,7 @@ does not promise fitment.
 2. Choose Vectra generation or paste a part code from the demo fixtures.
 3. See candidate equivalences with confidence and reasons.
 4. Read safety warnings for critical categories.
-5. Save/reopen a local `.opk.json` notes/project file.
+5. Save/reopen a local `.oparts.json` notes/project file.
 
 ## Non-goals for alpha
 

@@ -1,6 +1,6 @@
 # Safety
 
-OpenPartLine is an educational interchange lookup tool. It is **not** a workshop
+Open Parts is an educational interchange lookup tool. It is **not** a workshop
 instruction, fitment certificate, or authorization to install a part.
 
 ## Hard limits

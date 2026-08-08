@@ -50,7 +50,7 @@
     {
       "id": "syn-cabin-filter-b",
       "code": "SYN-VB-CABIN-01",
-      "brand": "OpenPartLine Demo",
+      "brand": "Open Parts Demo",
       "label": "Cabin filter (demo)",
       "category": "filter",
       "safetyClass": "wear-item",
@@ -60,7 +60,7 @@
     {
       "id": "syn-cabin-filter-c",
       "code": "SYN-VC-CABIN-01",
-      "brand": "OpenPartLine Demo",
+      "brand": "Open Parts Demo",
       "label": "Cabin filter (demo, gen C packaging)",
       "category": "filter",
       "safetyClass": "wear-item",
@@ -70,7 +70,7 @@
     {
       "id": "syn-oil-filter-shared",
       "code": "SYN-FAMILY2-OIL-01",
-      "brand": "OpenPartLine Demo",
+      "brand": "Open Parts Demo",
       "label": "Oil filter demo for Family II narrative",
       "category": "filter",
       "safetyClass": "wear-item",
@@ -80,7 +80,7 @@
     {
       "id": "syn-brake-pad-front",
       "code": "SYN-VB-BRAKE-F-01",
-      "brand": "OpenPartLine Demo",
+      "brand": "Open Parts Demo",
       "label": "Front brake pad set (demo)",
       "category": "brakes",
       "safetyClass": "safety-critical",
@@ -89,7 +89,7 @@
     {
       "id": "syn-brake-pad-alt",
       "code": "SYN-VB-BRAKE-F-ALT",
-      "brand": "OpenPartLine Demo",
+      "brand": "Open Parts Demo",
       "label": "Front brake pad set alternate box (demo)",
       "category": "brakes",
       "safetyClass": "safety-critical",
@@ -106,7 +106,7 @@
       "bidirectional": true,
       "provenance": {
         "kind": "synthetic-demo",
-        "summary": "Invented for OpenPartLine alpha fixtures",
+        "summary": "Invented for Open Parts alpha fixtures",
         "accessed": "2026-08-08"
       }
     },
@@ -132,7 +132,7 @@
       "bidirectional": true,
       "provenance": {
         "kind": "curator-note",
-        "summary": "OpenPartLine safety policy default for brakes in alpha",
+        "summary": "Open Parts safety policy default for brakes in alpha",
         "accessed": "2026-08-08"
       }
     }

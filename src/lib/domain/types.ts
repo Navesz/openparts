@@ -1,4 +1,4 @@
-/** Domain types for OpenPartLine interchange graph. Framework-free. */
+/** Domain types for Open Parts interchange graph. Framework-free. */
 
 export type Confidence = 'curated' | 'synthetic' | 'community-proposed' | 'do-not-advise';
 

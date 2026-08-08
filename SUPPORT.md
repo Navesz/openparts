@@ -1,6 +1,6 @@
 # Support
 
-OpenPartLine is an early volunteer project. There is no guaranteed response time and
+Open Parts is an early volunteer project. There is no guaranteed response time and
 no professional mechanical advice.
 
 - Ask usage questions in Discussions once enabled

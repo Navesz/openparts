@@ -1,4 +1,4 @@
-# OpenPartLine — session and delivery objectives
+# Open Parts — session and delivery objectives
 
 This file is the **authoritative objective register** for agents and humans.
 Work top-down. Do not invent OEM part numbers. Do not mark a milestone done
@@ -19,7 +19,7 @@ without the exit evidence listed here and in [ROADMAP.md](ROADMAP.md).
 | ID | Status | Objective | Exit evidence |
 |---|---|---|---|
 | O1 | in_progress | OSS foundation mirroring OpenKartLine governance | Files present: LICENSE, CoC, CONTRIBUTING, SECURITY, GOVERNANCE, SUPPORT, README EN/PT |
-| O2 | pending | Reproducible monorepo (pnpm web + uv Python) | `pnpm check` and `uv run pytest` documented and passing locally |
+| O2 | pending | Reproducible SvelteKit + TypeScript app | `pnpm check` and `pnpm test:run` documented and passing locally |
 | O3 | pending | Versioned interchange schema + Vectra seed with provenance | Schema + fixtures validate; no unlabeled “real” OEM inventions |
 | O4 | pending | Deterministic search engine (TS + Python parity path) | Unit tests for match / no-match / confidence filtering |
 | O5 | pending | Runnable browser alpha | Search UI, confidence labels, local JSON import/export |
@@ -28,7 +28,7 @@ without the exit evidence listed here and in [ROADMAP.md](ROADMAP.md).
 
 ## Agent continuation contract
 
-When this chat or a later agent resumes OpenPartLine:
+When this chat or a later agent resumes Open Parts:
 
 1. Read this file and [ROADMAP.md](ROADMAP.md).
 2. Pick the first objective that is not `done`.
