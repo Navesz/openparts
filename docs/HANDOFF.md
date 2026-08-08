@@ -7,10 +7,11 @@
 auto_continue: true
 project: Open Parts
 repo_dir: C:\Users\leona\OneDrive\Desktop\PROJETO
-github_target: Navesz/openparts (not created yet)
-stack: SvelteKit + TypeScript + Vitest + npm (NOT OpenKartLine stack)
+github_target: Navesz/openparts (creating next)
+stack: SvelteKit + TypeScript + Vitest + npm
 language: English first
 alpha_scope: Chevrolet Vectra BR only
+dev_server: http://127.0.0.1:5173/
 ```
 
 ## Hard rules (never drop)
@@ -18,34 +19,32 @@ alpha_scope: Chevrolet Vectra BR only
 - Do NOT invent OEM/aftermarket part numbers or fitment claims.
 - Synthetic fixture codes must stay `SYN-*` and labeled `synthetic`.
 - Safety-critical categories default to `do-not-advise`.
-- Commit incrementally after each slice (user requested frequent commits).
-- Consult OpenKartLine only for governance/README/CoC/PR/license tone — not tech stack.
-- Git author via env (`Naves` / `58537948+Navesz@users.noreply.github.com`); do not edit git config.
+- Commit incrementally after each slice.
+- Consult OpenKartLine only for governance tone — not tech stack.
+- Git author via env only; do not edit git config.
 
 ## Done so far
 
-- OSS governance docs + AGENTS + OBJECTIVES + SAFETY/VALIDATION
-- Domain engine + synthetic Vectra fixture + tests green
-- SvelteKit UI draft; `npm install` / typecheck / `npm run build` succeed
-- Continuity hooks + HANDOFF
-- Commits through safety-filter fix
+- Governance docs, domain engine, synthetic Vectra fixture, tests green (6)
+- Runnable UI with confidence badges + `.oparts.json` import/export
+- CI workflow + Issue/PR templates + CHANGELOG
+- Continuity hooks; `auto_continue: true`
+- Dev server intended at http://127.0.0.1:5173/
+
 ## Next actions (ordered)
 
-1. Polish runnable search UI and `.oparts.json` import/export
-2. Add `.github` Issue/PR templates + CI workflow
-3. Create public GitHub repo `openparts`, open milestone issues, push
-4. GitHub Pages demo when CI is green
-5. Update `docs/VALIDATION_REPORT.md` with measured commands
-6. Mark objectives O1-O7 done with evidence
+1. Create public GitHub repo `openparts`, push `main`, open milestone issues
+2. Enable Pages from Actions/artifact or static `build`
+3. Mark OBJECTIVES O1–O7 with evidence; tighten README quick start to npm
+4. Keep polishing alpha until strong, then set `auto_continue: false` only when done
+
 ## Blockers
 
-- `pnpm`/corepack EPERM on this machine → use **npm**
-- Git identity missing in config → use env vars per commit only
+- npm only (pnpm EPERM)
+- Git identity via env vars
 
-## Resume prompt (paste if hooks fail)
+## Resume prompt
 
 ```text
-Continue Open Parts from docs/HANDOFF.md and docs/OBJECTIVES.md.
-Do not ask for permission. Commit after each slice. Never invent OEM numbers.
-Pick the first incomplete next action and execute until alpha is strong or credits end.
+Continue Open Parts from docs/HANDOFF.md. Commit each slice. Never invent OEM numbers.
 ```

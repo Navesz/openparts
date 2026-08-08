@@ -1,0 +1,29 @@
+name: Bug report
+description: Report a reproducible Open Parts problem
+title: "[Bug]: "
+labels: ["type: bug", "needs-triage"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction
+      description: Smallest steps, fixture codes, browser/OS.
+    validations:
+      required: true
+  - type: textarea
+    id: safety
+    attributes:
+      label: Safety / honesty impact
+      description: Did a failed or do-not-advise result look successful?
