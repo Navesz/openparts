@@ -1,0 +1,29 @@
+name: Feature proposal
+description: Propose a scoped Open Parts improvement
+title: "[Feature]: "
+labels: ["type: feature", "needs-triage"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Describe the user need before proposing a solution.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation plan
+      description: How do we prove this without inventing OEM numbers?
+    validations:
+      required: true
+  - type: textarea
+    id: data
+    attributes:
+      label: Data and license impact

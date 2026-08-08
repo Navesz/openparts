@@ -32,9 +32,7 @@ work order.
 ```bash
 git clone https://github.com/Navesz/openparts.git
 cd openparts
-corepack enable
-pnpm install
-pnpm dev
+npm install\nnpm run dev
 ```
 
 ## Repository map

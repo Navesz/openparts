@@ -1,11 +1,12 @@
 # Validation report
 
-Status: **bootstrap** — fill with measured commands as soon as the scaffold runs.
+Status: **alpha measured locally**
 
 | Check | Command | Result | Date |
 |---|---|---|---|
-| Unit tests | `pnpm test:run` | pending | — |
-| Quality gate | `pnpm check` | pending | — |
-| Production build | `pnpm build` | pending | — |
+| Unit tests | `npm run test:run` | 6 passed | 2026-08-08 |
+| Typecheck | `npm run typecheck` | 0 errors | 2026-08-08 |
+| Production build | `npm run build` | static site in `build/` | 2026-08-08 |
+| Dev server | `npm run dev -- --host 127.0.0.1 --port 5173` | http://127.0.0.1:5173/ | 2026-08-08 |
 
-No fitment accuracy claim is authorized by this report.
+No fitment accuracy claim is authorized by this report. Demo codes are synthetic (`SYN-*`).
