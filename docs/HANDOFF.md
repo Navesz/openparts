@@ -1,12 +1,13 @@
-# Open Parts — HANDOFF (compact memory)
+# Open Parts ? HANDOFF (compact memory)
 
 ```yaml
-auto_continue: true
+auto_continue: false
 project: Open Parts
 repo_dir: C:\Users\leona\OneDrive\Desktop\PROJETO
 github: https://github.com/Navesz/openparts
+demo: https://navesz.github.io/openparts/
 stack: SvelteKit + TypeScript + Vitest + npm
-dev_server: http://127.0.0.1:5173/
+alpha_scope: Chevrolet Vectra BR only
 ```
 
 ## Hard rules
@@ -14,17 +15,19 @@ dev_server: http://127.0.0.1:5173/
 - do-not-advise for safety-critical defaults
 - Commit each slice; git author via env only
 
-## Done
-- Public repo pushed: https://github.com/Navesz/openparts
-- Runnable alpha UI + .oparts.json + tests (6) + build
-- Continuity hooks armed; milestone issues opened
-- CI example at docs/github/ci.yml.example (needs `workflow` OAuth scope to live under .github/workflows)
+## Done (alpha complete)
+- Full runnable app: Search, Catalog, About
+- Engine + schemas + synthetic fixtures + tests (6)
+- Local `.oparts.json` import/export
+- Public repo + milestone issues + gh-pages demo
+- Continuity hooks remain available; auto_continue off after alpha ship
 
-## Next
-1. Move CI example into .github/workflows after `gh auth refresh -s workflow`
-2. GitHub Pages from build/
-3. Polish UI/docs; close milestone issues with evidence
-4. Keep auto_continue true until alpha feels strong
+## Next (optional expansions)
+1. Grant `workflow` OAuth scope and move `docs/github/ci.yml.example` ? `.github/workflows/ci.yml`
+2. Curate real Vectra equivalences with provenance (still no scraping of proprietary EPC)
+3. Portuguese UI strings after English alpha hardens
+4. Broader Chevrolet platforms only after Vectra evidence quality is solid
 
 ## Resume
-Continue from this file. Never invent OEM numbers.
+If expanding: set `auto_continue: true` and pick the first optional item.
+Never invent OEM numbers.

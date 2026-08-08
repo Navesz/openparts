@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![Status](https://img.shields.io/badge/status-alpha-orange)](docs/ROADMAP.md)
 
-[Read in English](README.md) · [Roadmap](docs/ROADMAP.md) · [Objetivos](docs/OBJECTIVES.md) · [Contribuir](CONTRIBUTING.md)
+[Live demo](https://navesz.github.io/openparts/) � [Read in English](README.md) · [Roadmap](docs/ROADMAP.md) · [Objetivos](docs/OBJECTIVES.md) · [Contribuir](CONTRIBUTING.md)
 
 O Open Parts ajuda a explorar se um código de peça em um contexto Vectra pode
 relacionar-se a outro — com **confiança, proveniência e limites de segurança

@@ -5,34 +5,42 @@
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![Status](https://img.shields.io/badge/status-alpha-orange)](docs/ROADMAP.md)
 
-[Leia em português](README.pt-BR.md) · [Roadmap](docs/ROADMAP.md) · [Objectives](docs/OBJECTIVES.md) · [Contribute](CONTRIBUTING.md) · [Naming](docs/NAMING.md)
+[Live demo](https://navesz.github.io/openparts/) · [Leia em português](README.pt-BR.md) · [Roadmap](docs/ROADMAP.md) · [Objectives](docs/OBJECTIVES.md) · [Contribute](CONTRIBUTING.md)
 
 Open Parts helps you explore whether a part code for one Vectra context may relate
 to another — with **explicit confidence, provenance, and safety limits**.
 It is an engineering and learning tool, not a fitment guarantee and not a shop
 work order.
 
-## What works in the runnable alpha (target)
+## What works in the runnable alpha
 
-- Search demo fixtures by part code or vehicle generation
-- Inspect equivalence reasons and confidence badges
-- Refuse silent success on unknown codes
+- Search synthetic Vectra fixtures by part code or text
+- Confidence badges, provenance, and blocked/unknown honesty
+- Catalog and About pages
 - Save/reopen local `.oparts.json` notes
-- Run entirely in the browser (SvelteKit static build)
-
-## Non-goals (alpha)
-
-- All GM/Chevrolet vehicles
-- Scraping proprietary catalogs into the repository
-- Price scraping / auto-checkout
-- “Guaranteed fit” claims
+- Static build for GitHub Pages
 
 ## Quick start
 
 ```bash
 git clone https://github.com/Navesz/openparts.git
 cd openparts
-npm install\nnpm run dev
+npm install
+npm run dev
+```
+
+Open `http://localhost:5173`.
+
+```bash
+npm run test:run
+npm run build
+```
+
+For the Pages build with the `/openparts` base path:
+
+```bash
+# Windows PowerShell
+$env:BASE_PATH="/openparts"; npm run build
 ```
 
 ## Repository map
@@ -40,17 +48,15 @@ npm install\nnpm run dev
 | Layer | Role |
 |---|---|
 | `src/lib/domain` | Framework-free interchange engine |
-| `src/routes` | SvelteKit search UI |
+| `src/routes` | Search, Catalog, About UI |
 | `data/fixtures` | Vectra fixtures with provenance |
-| `docs` | Product, safety, validation, objectives |
-
-Governance patterns follow the spirit of OpenKartLine; the **stack does not**.
+| `packages/schemas` | JSON Schema for catalog + `.oparts.json` |
+| `docs` | Product, safety, validation, objectives, handoff |
 
 ## Safety and honesty
 
 Read [Safety](docs/SAFETY.md), [Validation](docs/VALIDATION.md), and [Privacy](docs/PRIVACY.md).
-Agents and humans must follow [AGENTS.md](AGENTS.md) and [docs/OBJECTIVES.md](docs/OBJECTIVES.md):
-**never invent OEM numbers**.
+**Never invent OEM numbers.**
 
 ## License
 
