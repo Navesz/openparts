@@ -2,39 +2,40 @@
 
 ## Vision
 
-Make cross-compatible car parts understandable for people who do not have a
-dealership EPC subscription — starting with Chevrolet Vectra.
+Make **cross-reference / intercambiabilidade** (batida de peças) understandable
+without a dealership EPC — starting with Chevrolet/GM Brazil platform families,
+seeded on Vectra.
 
-Open Parts turns a part code or vehicle context into an **explainable** list of
-possible equivalences, with confidence and sources. It does not sell parts and
-does not promise fitment.
+Open Parts turns a part code into an **explainable** list of catalog
+applications and equivalences, with confidence and sources. It does not sell
+parts and does not promise fitment.
 
 ## Initial users
 
-1. Vectra owners comparing workshop quotes.
-2. Independent mechanics checking platform sharing.
-3. Students learning how OEM numbering and interchange work.
+1. Owners comparing workshop quotes across shared GM platforms.
+2. Independent mechanics checking platform sharing (Família I / II).
+3. Students learning OEM numbering and interchange.
 4. Contributors curating redistributable fixtures.
 
 ## Runnable alpha journey
 
 1. Open the web app (no account).
-2. Choose Vectra generation or paste a part code from the demo fixtures.
-3. See candidate equivalences with confidence and reasons.
-4. Read safety warnings for critical categories.
-5. Save/reopen a local `.oparts.json` notes/project file.
+2. Paste a synthetic code (`SYN-FAMILY2-OIL-01`) or filter by vehicle.
+3. See **applications** (which cars in the fixture share that SKU) + equivalences.
+4. Read safety warnings; use **Fontes** for CepChev / TecDoc / Nakata workflows.
+5. Save/reopen a local `.oparts.json` notes file.
 
 ## Non-goals for alpha
 
-- All Chevrolet or all GM vehicles
-- Live supermarket-style price scraping
-- Automatic ordering or affiliate checkout
+- Scraping CepChev, TecDoc, OEM EPC, or dealer catalogs into the repo
+- Inventing real OEM numbers
 - Guaranteeing physical fitment
-- Replacing a calibrated workshop catalog (TecDoc/OEM EPC)
+- Replacing professional catalogs (see `docs/RESEARCH_SOURCES.md`)
+- Live prices / checkout
 
 ## Success criteria
 
-- A newcomer understands *why* two codes are linked.
-- A wrong or unknown code fails honestly.
+- A newcomer understands _why_ two codes/vehicles are linked.
+- Unknown codes fail honestly.
 - Contributors can add a fixture with provenance in one PR.
-- Safety-critical advice is conservative by default.
+- Safety-critical advice stays conservative by default.

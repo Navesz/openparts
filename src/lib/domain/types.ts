@@ -2,11 +2,7 @@
 
 export type Confidence = 'curated' | 'synthetic' | 'community-proposed' | 'do-not-advise';
 
-export type SafetyClass =
-  | 'non-critical'
-  | 'wear-item'
-  | 'safety-critical'
-  | 'unknown';
+export type SafetyClass = 'non-critical' | 'wear-item' | 'safety-critical' | 'unknown';
 
 export interface Provenance {
   kind: 'synthetic-demo' | 'public-article' | 'curator-note' | 'user-import';
@@ -18,10 +14,11 @@ export interface Provenance {
 export interface VehicleContext {
   id: string;
   make: 'Chevrolet';
-  model: 'Vectra';
-  generation: 'A' | 'B' | 'C';
+  model: string;
+  generation: string;
   market: 'BR';
   years: string;
+  platformFamily?: string;
   notes: string;
   relatedPlatformNotes: string[];
   sources: Provenance[];
@@ -65,6 +62,8 @@ export interface SearchHit {
   relatedPart?: PartNode;
   warnings: string[];
   provenance?: Provenance;
+  /** Vehicles this part is listed against in the loaded catalog. */
+  applications: VehicleContext[];
 }
 
 export interface SearchResult {

@@ -9,7 +9,7 @@
   const catalogName = getCatalogName();
   const t = pt.search;
 
-  let query = $state('SYN-VB-CABIN-01');
+  let query = $state('SYN-FAMILY2-OIL-01');
   let vehicleId = $state('');
   let notes = $state('');
   let result = $state<SearchResult | null>(null);
@@ -34,6 +34,18 @@
 
   function tryBrake() {
     query = 'SYN-VB-BRAKE-F-01';
+    search();
+  }
+
+  function tryFamily2() {
+    query = 'SYN-FAMILY2-OIL-01';
+    vehicleId = '';
+    search();
+  }
+
+  function tryFamily1() {
+    query = 'SYN-FAMILY1-THERMO-01';
+    vehicleId = '';
     search();
   }
 
@@ -110,7 +122,10 @@
         <select bind:value={vehicleId}>
           <option value="">{t.allVehicles}</option>
           {#each vehicles as v}
-            <option value={v.id}>{v.model} {v.generation} ({v.years})</option>
+            <option value={v.id}
+              >{v.model}
+              {v.generation} ({v.years}){v.platformFamily ? ` · ${v.platformFamily}` : ''}</option
+            >
           {/each}
         </select>
       </label>
@@ -121,6 +136,8 @@
     </form>
 
     <div class="button-row tools">
+      <button class="secondary" type="button" onclick={tryFamily2}>{t.tryFamily2}</button>
+      <button class="secondary" type="button" onclick={tryFamily1}>{t.tryFamily1}</button>
       <button class="secondary" type="button" onclick={tryUnknown}>{t.probeUnknown}</button>
       <button class="secondary" type="button" onclick={tryBrake}>{t.probeBrake}</button>
       <button class="secondary" type="button" onclick={downloadProject}>{t.saveProject}</button>
@@ -180,6 +197,29 @@
                 {hit.part.label} · {categoryLabel(hit.part.category)} · {hit.part.brand}
               </div>
               <p class="meta"><strong>{t.why}:</strong> {hit.reason}</p>
+              {#if hit.applications.length}
+                <div class="apps">
+                  <strong class="meta">{t.applications}:</strong>
+                  <ul class="app-list">
+                    {#each hit.applications as app}
+                      <li>
+                        <img
+                          src={vehicleImage(app.model, app.generation)}
+                          alt=""
+                          width="72"
+                          height="32"
+                        />
+                        <span
+                          >{app.make}
+                          {app.model}
+                          {app.generation} ({app.years}){#if app.platformFamily}
+                            · {app.platformFamily}{/if}</span
+                        >
+                      </li>
+                    {/each}
+                  </ul>
+                </div>
+              {/if}
               {#if hit.relatedPart}
                 <p class="meta">{t.relatedTo} <span class="mono">{hit.relatedPart.code}</span></p>
               {/if}
@@ -212,17 +252,15 @@
         <article class="panel vehicle">
           <img
             class="vehicle-art"
-            src={vehicleImage(v.generation)}
+            src={vehicleImage(v.model, v.generation)}
             alt="Silhueta {v.model} {v.generation}"
           />
           <strong>{v.make} {v.model} {v.generation}</strong>
-          <div class="meta">{v.years} · {v.market}</div>
+          <div class="meta">
+            {v.years} · {v.market}{#if v.platformFamily}
+              · {v.platformFamily}{/if}
+          </div>
           <p>{v.notes}</p>
-          <ul class="meta">
-            {#each v.relatedPlatformNotes as note}
-              <li>{note}</li>
-            {/each}
-          </ul>
         </article>
       {/each}
     </div>

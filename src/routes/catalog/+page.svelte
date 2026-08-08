@@ -76,8 +76,16 @@
     <div class="vehicle-grid">
       {#each vehicles as v}
         <article class="panel vehicle">
-          <img class="vehicle-art" src={vehicleImage(v.generation)} alt="" />
-          <strong>{v.id}</strong>
+          <img
+            class="vehicle-art"
+            src={vehicleImage(v.model, v.generation)}
+            alt="Silhueta {v.model} {v.generation}"
+          />
+          <strong>{v.make} {v.model} {v.generation}</strong>
+          <div class="meta">
+            {v.years}{#if v.platformFamily}
+              · {v.platformFamily}{/if}
+          </div>
           <p>{v.notes}</p>
         </article>
       {/each}

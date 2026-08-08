@@ -11,9 +11,9 @@
   --danger: #7a1f1f;
   --card: rgba(255, 255, 255, 0.72);
   --shadow: 0 18px 50px rgba(28, 36, 31, 0.08);
-  --font-display: "Fraunces", "Palatino Linotype", Palatino, serif;
-  --font-body: "Source Sans 3", "Segoe UI", sans-serif;
-  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --font-display: 'Fraunces', 'Palatino Linotype', Palatino, serif;
+  --font-body: 'Source Sans 3', 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
 }
 
 * {
@@ -270,12 +270,40 @@ button.secondary {
   background: rgba(255, 255, 255, 0.85);
 }
 
+.app-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.4rem 0 0;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.app-list li {
+  display: flex;
+  gap: 0.55rem;
+  align-items: center;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.app-list img {
+  border-radius: 0.35rem;
+  border: 1px solid var(--line);
+  background: #fff;
+  object-fit: cover;
+}
+
+.source-list {
+  display: grid;
+  gap: 0.75rem;
+  padding-left: 1.1rem;
+}
+
 @media (max-width: 900px) {
   .hero-with-media {
     grid-template-columns: 1fr;
   }
 }
-
 
 .topbar {
   display: flex;
@@ -389,6 +417,39 @@ textarea {
   display: none;
 }
 
+.apps {
+  margin-top: 0.55rem;
+}
+
+.app-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.4rem 0 0;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.app-list li {
+  display: flex;
+  gap: 0.55rem;
+  align-items: center;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.app-list img {
+  border-radius: 0.35rem;
+  border: 1px solid var(--line);
+  background: #fff;
+  object-fit: cover;
+}
+
+.source-list {
+  display: grid;
+  gap: 0.75rem;
+  padding-left: 1.1rem;
+}
+
 @media (max-width: 800px) {
   .controls {
     grid-template-columns: 1fr;
@@ -399,5 +460,3 @@ textarea {
     align-items: flex-start;
   }
 }
-
-

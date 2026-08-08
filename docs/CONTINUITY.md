@@ -5,12 +5,12 @@ context compaction or a new chat, without needing the full conversation.
 
 ## Files
 
-| File | Role |
-|---|---|
-| `docs/HANDOFF.md` | Compact working memory (source of truth for “what next”) |
-| `docs/OBJECTIVES.md` | Milestone board |
-| `AGENTS.md` | Standing engineering rules |
-| `.cursor/hooks.json` | Auto inject / auto continue |
+| File                 | Role                                                     |
+| -------------------- | -------------------------------------------------------- |
+| `docs/HANDOFF.md`    | Compact working memory (source of truth for “what next”) |
+| `docs/OBJECTIVES.md` | Milestone board                                          |
+| `AGENTS.md`          | Standing engineering rules                               |
+| `.cursor/hooks.json` | Auto inject / auto continue                              |
 
 ## Hooks
 

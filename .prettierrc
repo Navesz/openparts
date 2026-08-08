@@ -1,9 +1,15 @@
 {
-  "name": "openpeca",
-  "private": true,
-  "version": 1,
-  "numberingSystem": {
-    "format": "digit",
-    "precision": 3
-  }
+  "useTabs": false,
+  "singleQuote": true,
+  "trailingComma": "none",
+  "printWidth": 100,
+  "plugins": ["prettier-plugin-svelte"],
+  "overrides": [
+    {
+      "files": "*.svelte",
+      "options": {
+        "parser": "svelte"
+      }
+    }
+  ]
 }

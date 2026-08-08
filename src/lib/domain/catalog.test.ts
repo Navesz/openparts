@@ -31,6 +31,15 @@ describe('Vectra alpha catalog', () => {
     expect(result.hits).toHaveLength(0);
   });
 
+  it('lists multi-vehicle applications for Family II demo oil filter', () => {
+    const index = loadIndex(loadFixture());
+    const result = index.search('SYN-FAMILY2-OIL-01');
+    expect(result.status).toBe('ok');
+    const hit = result.hits[0];
+    expect(hit?.applications.length).toBeGreaterThan(2);
+    expect(hit?.applications.some((v) => v.model === 'Astra')).toBe(true);
+  });
+
   it('surfaces do-not-advise brake equivalence instead of silent success', () => {
     const index = loadIndex(loadFixture());
     const result = index.search('SYN-VB-BRAKE-F-01');

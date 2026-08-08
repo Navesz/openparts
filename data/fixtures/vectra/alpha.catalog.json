@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "name": "vectra-br-alpha-synthetic",
-  "description": "Catálogo sintético de demonstração do Chevrolet Vectra (Brasil). Os códigos NÃO são OEM reais. Notas de plataforma citam histórico público.",
+  "name": "gm-br-vectra-family-synthetic",
+  "description": "Catalogo sintetico focado em Vectra + narrativas de plataforma GM Brasil (Família I/II). Codigos NAO sao OEM reais. Use CepChev/TecDoc/Nakata para batida profissional.",
   "vehicles": [
     {
       "id": "vectra-b-br",
@@ -22,7 +22,8 @@
           "url": "https://motor1.uol.com.br/features/777248/historia-ultimo-chevrolet-vectra-brasil/",
           "accessed": "2026-08-08"
         }
-      ]
+      ],
+      "platformFamily": "Família II / Opel Vectra B"
     },
     {
       "id": "vectra-c-br",
@@ -42,6 +43,147 @@
           "summary": "Resumos públicos da história do Vectra III no Brasil",
           "url": "https://pt.wikipedia.org/wiki/Chevrolet_Vectra",
           "accessed": "2026-08-08"
+        }
+      ],
+      "platformFamily": "Família II / Astra-Zafira (BR)"
+    },
+    {
+      "id": "astra-g-br",
+      "make": "Chevrolet",
+      "model": "Astra",
+      "generation": "G",
+      "market": "BR",
+      "years": "1998-2011",
+      "platformFamily": "Família II / Opel Astra",
+      "notes": "Contemporaneo do Vectra no Brasil; fontes publicas citam compartilhamento de componentes com Vectra/Zafira em varias areas.",
+      "relatedPlatformNotes": [
+        "Nao trate compartilhamento de plataforma como equivalencia SKU automatica."
+      ],
+      "sources": [
+        {
+          "kind": "public-article",
+          "summary": "Historia publica GM/Opel no Brasil",
+          "url": "https://motor1.uol.com.br/features/777248/historia-ultimo-chevrolet-vectra-brasil/",
+          "accessed": "2026-08-09"
+        }
+      ]
+    },
+    {
+      "id": "zafira-a-br",
+      "make": "Chevrolet",
+      "model": "Zafira",
+      "generation": "A",
+      "market": "BR",
+      "years": "2001-2012",
+      "platformFamily": "Família II / Zafira",
+      "notes": "Minivan citada em reportagens como base relacionada ao Novo Vectra brasileiro.",
+      "relatedPlatformNotes": [
+        "Relacao de plataforma e narrativa historica, nao prova de pastilha/filtro identicos."
+      ],
+      "sources": [
+        {
+          "kind": "public-article",
+          "summary": "Vectra III e plataforma Zafira no Brasil",
+          "url": "https://pt.wikipedia.org/wiki/Chevrolet_Vectra",
+          "accessed": "2026-08-09"
+        }
+      ]
+    },
+    {
+      "id": "monza-br",
+      "make": "Chevrolet",
+      "model": "Monza",
+      "generation": "final",
+      "market": "BR",
+      "years": "1991-1996",
+      "platformFamily": "Família II (antecessor)",
+      "notes": "Antecessor historico do Vectra no Brasil; motores Family II sao amplamente citados na linhagem.",
+      "relatedPlatformNotes": [
+        "Geracao e injecao (EFI/MPFI) mudam pecas mesmo com motor 2.0 no nome."
+      ],
+      "sources": [
+        {
+          "kind": "public-article",
+          "summary": "Contexto Monza/Vectra",
+          "url": "https://autovideos.com.br/verdades-surpreendentes-monza-e-vectra/",
+          "accessed": "2026-08-09"
+        }
+      ]
+    },
+    {
+      "id": "corsa-b-br",
+      "make": "Chevrolet",
+      "model": "Corsa",
+      "generation": "B",
+      "market": "BR",
+      "years": "1994-2002",
+      "platformFamily": "Família I",
+      "notes": "Entrada da Família I no Brasil; Celta/Prisma/Meriva/Montana antiga compartilham muitos itens segundo literatura de oficina — aqui so narrativa.",
+      "relatedPlatformNotes": [
+        "Celta/Prisma/Corsa: confirme codigo gravado e ano/versao; geracoes mudam radicalmente."
+      ],
+      "sources": [
+        {
+          "kind": "synthetic-demo",
+          "summary": "Narrativa educacional Família I — sem OEM inventado",
+          "accessed": "2026-08-09"
+        }
+      ]
+    },
+    {
+      "id": "celta-br",
+      "make": "Chevrolet",
+      "model": "Celta",
+      "generation": "1",
+      "market": "BR",
+      "years": "2000-2015",
+      "platformFamily": "Família I",
+      "notes": "Derivado da familia Corsa no Brasil.",
+      "relatedPlatformNotes": [
+        "Use codigo OEM + catalogo aftermarket (Nakata/TecDoc) para batida real."
+      ],
+      "sources": [
+        {
+          "kind": "synthetic-demo",
+          "summary": "Narrativa educacional Família I",
+          "accessed": "2026-08-09"
+        }
+      ]
+    },
+    {
+      "id": "prisma-br",
+      "make": "Chevrolet",
+      "model": "Prisma",
+      "generation": "1",
+      "market": "BR",
+      "years": "2006-2012",
+      "platformFamily": "Família I",
+      "notes": "Sedan da familia Celta/Corsa.",
+      "relatedPlatformNotes": ["Mesmo nome em geracoes diferentes nao implica mesma peca."],
+      "sources": [
+        {
+          "kind": "synthetic-demo",
+          "summary": "Narrativa educacional Família I",
+          "accessed": "2026-08-09"
+        }
+      ]
+    },
+    {
+      "id": "meriva-br",
+      "make": "Chevrolet",
+      "model": "Meriva",
+      "generation": "A",
+      "market": "BR",
+      "years": "2003-2012",
+      "platformFamily": "Família I / Opel",
+      "notes": "Citada junto a Astra/Vectra em compartilhamento de acabamentos internos em algumas reportagens.",
+      "relatedPlatformNotes": ["Difusores/botoes != equivalencia de freio ou sensor."],
+      "sources": [
+        {
+          "kind": "public-article",
+          "summary": "Vectra e componentes compartilhados",
+          "url": "https://motor1.uol.com.br/features/777248/historia-ultimo-chevrolet-vectra-brasil/",
+          "accessed": "2026-08-09"
         }
       ]
     }
@@ -71,11 +213,11 @@
       "id": "syn-oil-filter-shared",
       "code": "SYN-FAMILY2-OIL-01",
       "brand": "Open Parts Demo",
-      "label": "Filtro de óleo (demo narrativa Family II)",
+      "label": "Filtro de óleo (demo Família II)",
       "category": "filter",
       "safetyClass": "wear-item",
-      "fitsVehicleIds": ["vectra-b-br", "vectra-c-br"],
-      "notes": "Nó sintético ilustrando narrativa de motor compartilhado — não é interchange OEM."
+      "fitsVehicleIds": ["vectra-b-br", "vectra-c-br", "astra-g-br", "zafira-a-br", "monza-br"],
+      "notes": "Demo educacional Família II — NÃO é OEM."
     },
     {
       "id": "syn-air-filter-b",
@@ -153,11 +295,21 @@
       "id": "syn-bulb-h4",
       "code": "SYN-SHARED-BULB-H4",
       "brand": "Open Parts Demo",
-      "label": "Lâmpada H4 (demo compartilhada)",
+      "label": "Lampada H4 (demo compartilhada)",
       "category": "electrical",
       "safetyClass": "wear-item",
-      "fitsVehicleIds": ["vectra-b-br", "vectra-c-br"],
-      "notes": "Demo de item de consumo genérico — confirme soquete e farol no veículo real."
+      "fitsVehicleIds": [
+        "corsa-b-br",
+        "celta-br",
+        "prisma-br",
+        "meriva-br",
+        "vectra-b-br",
+        "vectra-c-br",
+        "astra-g-br",
+        "zafira-a-br",
+        "monza-br"
+      ],
+      "notes": "Item de consumo generico de demo."
     },
     {
       "id": "syn-battery-60",
@@ -275,6 +427,36 @@
       "category": "brakes",
       "safetyClass": "safety-critical",
       "fitsVehicleIds": ["vectra-c-br"]
+    },
+    {
+      "id": "syn-spark-family2",
+      "code": "SYN-FAMILY2-SPARK-01",
+      "brand": "Open Parts Demo",
+      "label": "Jogo de velas (demo Família II)",
+      "category": "ignition",
+      "safetyClass": "wear-item",
+      "fitsVehicleIds": ["vectra-b-br", "vectra-c-br", "astra-g-br", "zafira-a-br", "monza-br"],
+      "notes": "Demo: confirme grau termico no veiculo real."
+    },
+    {
+      "id": "syn-thermo-family1",
+      "code": "SYN-FAMILY1-THERMO-01",
+      "brand": "Open Parts Demo",
+      "label": "Valvula termostática (demo Família I)",
+      "category": "cooling",
+      "safetyClass": "wear-item",
+      "fitsVehicleIds": ["corsa-b-br", "celta-br", "prisma-br", "meriva-br"],
+      "notes": "Demo Corsa/Celta/Prisma/Meriva."
+    },
+    {
+      "id": "syn-coil-family1",
+      "code": "SYN-FAMILY1-COIL-01",
+      "brand": "Open Parts Demo",
+      "label": "Bobina de ignicao (demo Família I)",
+      "category": "ignition",
+      "safetyClass": "wear-item",
+      "fitsVehicleIds": ["corsa-b-br", "celta-br", "prisma-br", "meriva-br"],
+      "notes": "EFI vs MPFI mudam pecas — SKU so demo."
     }
   ],
   "equivalences": [
@@ -379,6 +561,19 @@
       "provenance": {
         "kind": "curator-note",
         "summary": "Política de segurança do Open Parts para freios no alpha",
+        "accessed": "2026-08-09"
+      }
+    },
+    {
+      "id": "eq-family2-oil-spark-propose",
+      "fromPartId": "syn-oil-filter-shared",
+      "toPartId": "syn-spark-family2",
+      "confidence": "community-proposed",
+      "reason": "Proposta ficticia so para UI: mesma familia de motor NAO implica filtro=vela.",
+      "bidirectional": false,
+      "provenance": {
+        "kind": "synthetic-demo",
+        "summary": "Exemplo educacional de community-proposed",
         "accessed": "2026-08-09"
       }
     }

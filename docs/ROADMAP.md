@@ -9,14 +9,14 @@ Open Parts targets a **runnable alpha** for Chevrolet Vectra interchange lookup
 with explicit confidence and provenance. Broader GM coverage is explicitly out of
 alpha scope.
 
-| Capability | Alpha target | Later |
-|---|---|---|
-| Vehicle scope | Chevrolet Vectra (documented generations in fixtures) | Other Chevrolet/GM platforms |
-| Search | Part code / vehicle / category lookup | OCR of box labels, VIN decode |
-| Data | Curated + synthetic fixtures with provenance | Optional importer for rights-cleared catalogs |
-| Engine | Deterministic graph/index in Python + TS fallback | Richer scoring, conflict detection |
-| UI | Browser search, confidence labels, local project file | Offline installers |
-| Quality | Lint/test/CI, safety docs, issue/PR templates | Pages demo, signed releases |
+| Capability    | Alpha target                                          | Later                                         |
+| ------------- | ----------------------------------------------------- | --------------------------------------------- |
+| Vehicle scope | Chevrolet Vectra + Família I/II demo fixtures     | Broader GM; Ecotec fixtures                   |
+| Search        | Code → applications + equivalences                | OCR of box labels, VIN decode                 |
+| Data          | Curated + synthetic fixtures with provenance          | Optional importer for rights-cleared catalogs |
+| Engine        | Deterministic graph/index in Python + TS fallback     | Richer scoring, conflict detection            |
+| UI            | Browser search, confidence labels, local project file | Offline installers                            |
+| Quality       | Lint/test/CI, safety docs, issue/PR templates         | Pages demo, signed releases                   |
 
 ## M0 — Reproducible foundation
 

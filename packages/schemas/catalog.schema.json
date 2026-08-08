@@ -54,26 +54,25 @@
       "properties": {
         "id": { "type": "string" },
         "make": { "const": "Chevrolet" },
-        "model": { "const": "Vectra" },
-        "generation": { "type": "string", "enum": ["A", "B", "C"] },
+        "model": { "type": "string", "minLength": 1 },
+        "generation": { "type": "string", "minLength": 1 },
         "market": { "const": "BR" },
         "years": { "type": "string" },
+        "platformFamily": { "type": "string" },
         "notes": { "type": "string" },
-        "relatedPlatformNotes": { "type": "array", "items": { "type": "string" } },
-        "sources": { "type": "array", "items": { "$ref": "#/$defs/provenance" } }
+        "relatedPlatformNotes": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "sources": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/provenance" }
+        }
       }
     },
     "part": {
       "type": "object",
-      "required": [
-        "id",
-        "code",
-        "brand",
-        "label",
-        "category",
-        "safetyClass",
-        "fitsVehicleIds"
-      ],
+      "required": ["id", "code", "brand", "label", "category", "safetyClass", "fitsVehicleIds"],
       "additionalProperties": false,
       "properties": {
         "id": { "type": "string" },

@@ -25,7 +25,8 @@ if (!existsSync(handoffPath)) {
 
 const handoff = readFileSync(handoffPath, 'utf8');
 const auto = /^\s*auto_continue:\s*true\s*$/m.test(handoff);
-const finished = /all alpha objectives complete/i.test(handoff) || /auto_continue:\s*false/i.test(handoff);
+const finished =
+  /all alpha objectives complete/i.test(handoff) || /auto_continue:\s*false/i.test(handoff);
 
 if (!auto || finished) {
   process.stdout.write('{}');
