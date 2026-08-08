@@ -1,50 +1,30 @@
-# Open Parts — HANDOFF (compact memory)
-
-> **Agents: read this first on every new/compacted session.**
-> Keep this file under ~80 lines. Update it after every meaningful slice, then commit.
+# Open Parts � HANDOFF (compact memory)
 
 ```yaml
 auto_continue: true
 project: Open Parts
 repo_dir: C:\Users\leona\OneDrive\Desktop\PROJETO
-github_target: Navesz/openparts (creating next)
+github: https://github.com/Navesz/openparts
 stack: SvelteKit + TypeScript + Vitest + npm
-language: English first
-alpha_scope: Chevrolet Vectra BR only
 dev_server: http://127.0.0.1:5173/
 ```
 
-## Hard rules (never drop)
+## Hard rules
+- No invented OEM numbers; SYN-* only for demo
+- do-not-advise for safety-critical defaults
+- Commit each slice; git author via env only
 
-- Do NOT invent OEM/aftermarket part numbers or fitment claims.
-- Synthetic fixture codes must stay `SYN-*` and labeled `synthetic`.
-- Safety-critical categories default to `do-not-advise`.
-- Commit incrementally after each slice.
-- Consult OpenKartLine only for governance tone — not tech stack.
-- Git author via env only; do not edit git config.
+## Done
+- Public repo pushed: https://github.com/Navesz/openparts
+- Runnable alpha UI + .oparts.json + tests (6) + build
+- Continuity hooks armed; milestone issues opened
+- CI example at docs/github/ci.yml.example (needs `workflow` OAuth scope to live under .github/workflows)
 
-## Done so far
+## Next
+1. Move CI example into .github/workflows after `gh auth refresh -s workflow`
+2. GitHub Pages from build/
+3. Polish UI/docs; close milestone issues with evidence
+4. Keep auto_continue true until alpha feels strong
 
-- Governance docs, domain engine, synthetic Vectra fixture, tests green (6)
-- Runnable UI with confidence badges + `.oparts.json` import/export
-- CI workflow + Issue/PR templates + CHANGELOG
-- Continuity hooks; `auto_continue: true`
-- Dev server intended at http://127.0.0.1:5173/
-
-## Next actions (ordered)
-
-1. Create public GitHub repo `openparts`, push `main`, open milestone issues
-2. Enable Pages from Actions/artifact or static `build`
-3. Mark OBJECTIVES O1–O7 with evidence; tighten README quick start to npm
-4. Keep polishing alpha until strong, then set `auto_continue: false` only when done
-
-## Blockers
-
-- npm only (pnpm EPERM)
-- Git identity via env vars
-
-## Resume prompt
-
-```text
-Continue Open Parts from docs/HANDOFF.md. Commit each slice. Never invent OEM numbers.
-```
+## Resume
+Continue from this file. Never invent OEM numbers.
