@@ -1,5 +1,6 @@
 <script lang="ts">
   import { getCatalogName, getVehicles, runSearch } from '$lib/search';
+  import { createProject, parseProject, serializeProject } from '$lib/domain/projectFile';
   import type { SearchResult } from '$lib/domain/types';
 
   const vehicles = getVehicles();
@@ -7,16 +8,66 @@
 
   let query = $state('SYN-VB-CABIN-01');
   let vehicleId = $state('');
+  let notes = $state('');
   let result = $state<SearchResult | null>(null);
+  let fileMessage = $state('');
 
   function search() {
     result = runSearch(query, vehicleId || undefined);
+    fileMessage = '';
   }
 
   function resetDemo() {
     query = 'SYN-VB-CABIN-01';
     vehicleId = '';
+    notes = '';
     search();
+  }
+
+  function tryUnknown() {
+    query = 'REAL-OEM-SHOULD-NOT-EXIST';
+    search();
+  }
+
+  function tryBrake() {
+    query = 'SYN-VB-BRAKE-F-01';
+    search();
+  }
+
+  function downloadProject() {
+    const project = createProject({
+      query,
+      vehicleId,
+      notes,
+      lastResultStatus: result?.status
+    });
+    const blob = new Blob([serializeProject(project)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'openparts-notes.oparts.json';
+    a.click();
+    URL.revokeObjectURL(url);
+    fileMessage = 'Downloaded local .oparts.json notes file.';
+  }
+
+  async function onImport(event: Event) {
+    const input = event.currentTarget as HTMLInputElement;
+    const file = input.files?.[0];
+    if (!file) return;
+    try {
+      const text = await file.text();
+      const project = parseProject(text);
+      query = project.query;
+      vehicleId = project.vehicleId;
+      notes = project.notes;
+      search();
+      fileMessage = `Loaded project saved at ${project.savedAt}`;
+    } catch (error) {
+      fileMessage = error instanceof Error ? error.message : 'Failed to import project';
+    } finally {
+      input.value = '';
+    }
   }
 
   search();
@@ -58,11 +109,30 @@
           {/each}
         </select>
       </label>
-      <div style="display:flex; gap:0.5rem;">
+      <div class="button-row">
         <button type="submit">Search</button>
         <button class="secondary" type="button" onclick={resetDemo}>Demo</button>
       </div>
     </form>
+
+    <div class="button-row tools">
+      <button class="secondary" type="button" onclick={tryUnknown}>Probe unknown code</button>
+      <button class="secondary" type="button" onclick={tryBrake}>Probe brake refusal</button>
+      <button class="secondary" type="button" onclick={downloadProject}>Save .oparts.json</button>
+      <label class="file-btn secondary">
+        Load .oparts.json
+        <input type="file" accept=".json,application/json" onchange={onImport} />
+      </label>
+    </div>
+
+    <label class="notes">
+      Local notes (saved only in your .oparts.json)
+      <textarea bind:value={notes} rows="3" placeholder="Optional notes stay on your machine"></textarea>
+    </label>
+
+    {#if fileMessage}
+      <p class="meta">{fileMessage}</p>
+    {/if}
 
     {#if result}
       <div class="results" aria-live="polite">
