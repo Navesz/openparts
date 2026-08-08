@@ -64,6 +64,7 @@ export interface SearchHit {
   reason: string;
   relatedPart?: PartNode;
   warnings: string[];
+  provenance?: Provenance;
 }
 
 export interface SearchResult {

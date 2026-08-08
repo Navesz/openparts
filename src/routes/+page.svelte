@@ -136,34 +136,51 @@
 
     {#if result}
       <div class="results" aria-live="polite">
-        <p class="meta">
+        <p class="meta status-line status-{result.status}">
           Status: <strong class="mono">{result.status}</strong>
           {#if result.messages.length}
             — {result.messages.join(' ')}
           {/if}
         </p>
 
-        {#if result.hits.length === 0}
-          <div class="hit">
+        {#if result.status === 'unknown-code'}
+          <div class="hit hit-miss">
             <strong>No match</strong>
             <p class="meta">
               Open Parts refuses to invent an equivalence when the catalog has no
               evidence.
             </p>
           </div>
+        {:else if result.status === 'blocked'}
+          <div class="hit hit-blocked">
+            <strong>Advice blocked</strong>
+            <p class="meta">
+              Every related edge is do-not-advise. Review warnings below; do not
+              treat this as a substitution recommendation.
+            </p>
+          </div>
         {/if}
 
         {#each result.hits as hit}
-          <article class="hit">
+          <article class="hit" class:hit-blocked={hit.confidence === 'do-not-advise'}>
             <header>
               <strong class="mono">{hit.part.code}</strong>
               <span class="badge {hit.confidence}">{hit.confidence}</span>
               <span class="meta">{hit.matchedVia}</span>
+              <span class="meta">{hit.part.safetyClass}</span>
             </header>
             <div>{hit.part.label} · {hit.part.category} · {hit.part.brand}</div>
-            <p class="meta">{hit.reason}</p>
+            <p class="meta"><strong>Why:</strong> {hit.reason}</p>
             {#if hit.relatedPart}
               <p class="meta">Related to <span class="mono">{hit.relatedPart.code}</span></p>
+            {/if}
+            {#if hit.provenance}
+              <p class="meta">
+                Provenance: {hit.provenance.kind} — {hit.provenance.summary}
+                {#if hit.provenance.url}
+                  · <a href={hit.provenance.url} rel="noreferrer" target="_blank">source</a>
+                {/if}
+              </p>
             {/if}
             {#if hit.warnings.length}
               <ul class="warnings">

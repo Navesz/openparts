@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { base } from '$app/paths';
   import '../app.css';
 </script>
 
@@ -12,4 +13,21 @@
   <title>Open Parts</title>
 </svelte:head>
 
+<div class="topbar">
+  <a class="topbrand" href="{base}/">Open Parts</a>
+  <nav aria-label="Primary">
+    <a href="{base}/">Search</a>
+    <a href="{base}/catalog/">Catalog</a>
+    <a href="{base}/about/">About</a>
+  </nav>
+</div>
+
 <slot />
+
+<footer class="site-footer">
+  <p>
+    Alpha · Chevrolet Vectra BR fixtures ·
+    <a href="https://github.com/Navesz/openparts">GitHub</a>
+    · not a fitment guarantee
+  </p>
+</footer>

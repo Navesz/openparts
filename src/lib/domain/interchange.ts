@@ -132,9 +132,18 @@ export class InterchangeIndex {
         hits.push({
           part,
           matchedVia: 'exact-code',
-          confidence: 'curated',
+          confidence: part.code.startsWith('SYN-') ? 'synthetic' : 'curated',
           reason: 'Code found directly in the loaded catalog.',
-          warnings: safetyWarnings(part, 'curated')
+          warnings: safetyWarnings(
+            part,
+            part.code.startsWith('SYN-') ? 'synthetic' : 'curated'
+          ),
+          provenance: {
+            kind: part.code.startsWith('SYN-') ? 'synthetic-demo' : 'curator-note',
+            summary: part.code.startsWith('SYN-')
+              ? 'Synthetic demo SKU from the alpha Vectra fixture'
+              : 'Loaded from the active catalog document'
+          }
         });
 
         const edges = this.edgesFrom.get(part.id) ?? [];
@@ -151,7 +160,8 @@ export class InterchangeIndex {
               matchedVia: 'equivalence',
               confidence: 'do-not-advise',
               reason: edge.reason,
-              warnings: safetyWarnings(other, 'do-not-advise')
+              warnings: safetyWarnings(other, 'do-not-advise'),
+              provenance: edge.provenance
             });
             continue;
           }
@@ -164,7 +174,8 @@ export class InterchangeIndex {
             matchedVia: 'equivalence',
             confidence: edge.confidence,
             reason: edge.reason,
-            warnings: safetyWarnings(other, edge.confidence)
+            warnings: safetyWarnings(other, edge.confidence),
+            provenance: edge.provenance
           });
         }
       }
