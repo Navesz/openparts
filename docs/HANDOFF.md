@@ -6,7 +6,7 @@ project: Open Parts
 github: https://github.com/Navesz/openparts
 demo: https://navesz.github.io/openparts/
 dev: http://127.0.0.1:5173/
-next_objective: O9
+next_objective: polish-a11y
 ```
 
 ## Hard rules
@@ -18,14 +18,12 @@ next_objective: O9
 
 ## Done recently
 
-- Multi-vehicle applications on search hits
-- Expanded Family I/II synthetic catalog
-- Pages: `/plataformas/`, `/fontes/` + `docs/RESEARCH_SOURCES.md`
-- PT UI demos: SYN-FAMILY2-OIL-01 / SYN-FAMILY1-THERMO-01
+- O8 batida UX + Fontes/Plataformas (deployed)
+- O9 PUBLIC_HISTORY + public-article edge
+- O10 Family I apps (thermo/coil/O2) + EFI/MPFI reminder
 
 ## Next
 
-1. O9: curated public-history notes (still no proprietary scrape)
-2. Polish accents in catalog strings if still ASCII
-3. Redeploy gh-pages after this slice
-4. CI workflow when OAuth workflow scope available
+1. A11y polish on applications list / focus states
+2. Optional Montana antiga synthetic vehicle (Family I narrative only)
+3. CI workflow when OAuth workflow scope available

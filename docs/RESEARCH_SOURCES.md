@@ -14,4 +14,6 @@ Professional “batida de peças” should use independent catalogs:
 Suggested workflow: **OEM code on the old part → CepChev → TecDoc/Nakata → verify on the car**
 (year, engine, EFI vs MPFI).
 
+Platform education notes (no OEM invention): [PUBLIC_HISTORY.md](PUBLIC_HISTORY.md).
+
 Do **not** commit scraped proprietary EPC/TecDoc extracts.

@@ -19,9 +19,10 @@
     <h2>Famílias usadas neste alpha</h2>
     <ul>
       <li>
-        <strong>Família I (1.0 / 1.4 / 1.8)</strong> — narrativa educacional: Corsa, Celta, Prisma, Meriva
-        (e Montana antiga na literatura de oficina). Sensores/bobinas/termostatos costumam ser parecidos;
-        geração e injeção mudam tudo.
+        <strong>Família I (1.0 / 1.4 / 1.8)</strong> — narrativa educacional: Corsa, Celta, Prisma,
+        Meriva (e Montana antiga na literatura de oficina). Sensores/bobinas/termostatos costumam
+        ser parecidos; geração e injeção mudam tudo. Demos: <code>SYN-FAMILY1-THERMO-01</code>,
+        <code>SYN-FAMILY1-COIL-01</code>, <code>SYN-FAMILY1-O2-01</code>.
       </li>
       <li>
         <strong>Família II (2.0 / 2.4)</strong> — Monza, Vectra, Astra, Zafira: componentes

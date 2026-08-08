@@ -49,6 +49,12 @@
     search();
   }
 
+  function tryFamily1O2() {
+    query = 'SYN-FAMILY1-O2-01';
+    vehicleId = '';
+    search();
+  }
+
   function downloadProject() {
     const project = createProject({
       query,
@@ -99,6 +105,7 @@
       <h1 class="brand">{t.title}</h1>
       <p class="lede">{t.lede}</p>
       <div class="banner" role="note">{t.banner}</div>
+      <p class="meta">{t.efiNote}</p>
     </div>
     <figure class="hero-figure">
       <img src={heroImage()} alt="Atmosfera de oficina com sedã estilo Vectra" />
@@ -138,6 +145,7 @@
     <div class="button-row tools">
       <button class="secondary" type="button" onclick={tryFamily2}>{t.tryFamily2}</button>
       <button class="secondary" type="button" onclick={tryFamily1}>{t.tryFamily1}</button>
+      <button class="secondary" type="button" onclick={tryFamily1O2}>{t.tryFamily1O2}</button>
       <button class="secondary" type="button" onclick={tryUnknown}>{t.probeUnknown}</button>
       <button class="secondary" type="button" onclick={tryBrake}>{t.probeBrake}</button>
       <button class="secondary" type="button" onclick={downloadProject}>{t.saveProject}</button>
