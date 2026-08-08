@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "name": "vectra-br-alpha-synthetic",
-  "description": "Synthetic Chevrolet Vectra (Brazil) demo catalog. Codes are NOT real OEM numbers. Platform notes cite public history only.",
+  "description": "Catálogo sintético de demonstração do Chevrolet Vectra (Brasil). Os códigos NÃO são OEM reais. Notas de plataforma citam histórico público.",
   "vehicles": [
     {
       "id": "vectra-b-br",
@@ -10,15 +10,15 @@
       "generation": "B",
       "market": "BR",
       "years": "1996-2005",
-      "notes": "Brazilian Vectra B era, commonly associated with Opel Vectra B engineering heritage.",
+      "notes": "Era do Vectra B brasileiro, associada à engenharia Opel Vectra B.",
       "relatedPlatformNotes": [
-        "Public automotive history links Vectra B branding across Opel/Vauxhall/Holden/Chevrolet markets with local emblem/grille differences.",
-        "Alpha scope stays informational; do not treat sibling-market cars as automatic bolt-on fitment."
+        "Histórico público liga o Vectra B a mercados Opel/Vauxhall/Holden/Chevrolet com diferenças locais de emblema e grade.",
+        "O alpha é informativo: não trate carros de outros mercados como encaixe automático."
       ],
       "sources": [
         {
           "kind": "public-article",
-          "summary": "Motor1 feature on Brazilian Vectra lineage and Opel-era context",
+          "summary": "Reportagem Motor1 sobre a linhagem do Vectra no Brasil",
           "url": "https://motor1.uol.com.br/features/777248/historia-ultimo-chevrolet-vectra-brasil/",
           "accessed": "2026-08-08"
         }
@@ -31,15 +31,15 @@
       "generation": "C",
       "market": "BR",
       "years": "2006-2011",
-      "notes": "Brazilian 'Novo Vectra' is not the European Vectra C; public sources describe Zafira-related underpinnings and Astra-inspired bodywork.",
+      "notes": "O 'Novo Vectra' brasileiro não é o Vectra C europeu; fontes públicas descrevem base próxima à Zafira e visual inspirado no Astra.",
       "relatedPlatformNotes": [
-        "Public reporting describes shared cabin controls/air vents with contemporary Chevrolet models such as Astra/Meriva families.",
-        "Family II engine lineage is widely discussed as shared across several GM Brazil models of the era — still not a per-SKU fitment proof."
+        "Reportagens citam comandos e difusores compartilhados com famílias Astra/Meriva da época.",
+        "A linhagem Family II é amplamente citada em vários GM Brasil — isso não prova equivalência SKU a SKU."
       ],
       "sources": [
         {
           "kind": "public-article",
-          "summary": "Motor1 / Wikipedia summaries of Brazilian Vectra III platform story",
+          "summary": "Resumos públicos da história do Vectra III no Brasil",
           "url": "https://pt.wikipedia.org/wiki/Chevrolet_Vectra",
           "accessed": "2026-08-08"
         }
@@ -51,37 +51,209 @@
       "id": "syn-cabin-filter-b",
       "code": "SYN-VB-CABIN-01",
       "brand": "Open Parts Demo",
-      "label": "Cabin filter (demo)",
+      "label": "Filtro de cabine (demo)",
       "category": "filter",
       "safetyClass": "wear-item",
       "fitsVehicleIds": ["vectra-b-br"],
-      "notes": "Synthetic demo SKU for UI and tests."
+      "notes": "SKU sintético para UI e testes."
     },
     {
       "id": "syn-cabin-filter-c",
       "code": "SYN-VC-CABIN-01",
       "brand": "Open Parts Demo",
-      "label": "Cabin filter (demo, gen C packaging)",
+      "label": "Filtro de cabine (demo, embalagem gen. C)",
       "category": "filter",
       "safetyClass": "wear-item",
       "fitsVehicleIds": ["vectra-c-br"],
-      "notes": "Synthetic alternate packaging code used to demo equivalence edges."
+      "notes": "Código sintético alternativo para demonstrar arestas de equivalência."
     },
     {
       "id": "syn-oil-filter-shared",
       "code": "SYN-FAMILY2-OIL-01",
       "brand": "Open Parts Demo",
-      "label": "Oil filter demo for Family II narrative",
+      "label": "Filtro de óleo (demo narrativa Family II)",
       "category": "filter",
       "safetyClass": "wear-item",
       "fitsVehicleIds": ["vectra-b-br", "vectra-c-br"],
-      "notes": "Synthetic node illustrating shared-engine storytelling — not a real OEM interchange."
+      "notes": "Nó sintético ilustrando narrativa de motor compartilhado — não é interchange OEM."
+    },
+    {
+      "id": "syn-air-filter-b",
+      "code": "SYN-VB-AIR-01",
+      "brand": "Open Parts Demo",
+      "label": "Filtro de ar (demo)",
+      "category": "filter",
+      "safetyClass": "wear-item",
+      "fitsVehicleIds": ["vectra-b-br"]
+    },
+    {
+      "id": "syn-air-filter-c",
+      "code": "SYN-VC-AIR-01",
+      "brand": "Open Parts Demo",
+      "label": "Filtro de ar (demo gen. C)",
+      "category": "filter",
+      "safetyClass": "wear-item",
+      "fitsVehicleIds": ["vectra-c-br"]
+    },
+    {
+      "id": "syn-fuel-filter-b",
+      "code": "SYN-VB-FUEL-01",
+      "brand": "Open Parts Demo",
+      "label": "Filtro de combustível (demo)",
+      "category": "filter",
+      "safetyClass": "wear-item",
+      "fitsVehicleIds": ["vectra-b-br"]
+    },
+    {
+      "id": "syn-fuel-filter-c",
+      "code": "SYN-VC-FUEL-01",
+      "brand": "Open Parts Demo",
+      "label": "Filtro de combustível (demo gen. C)",
+      "category": "filter",
+      "safetyClass": "wear-item",
+      "fitsVehicleIds": ["vectra-c-br"]
+    },
+    {
+      "id": "syn-spark-b",
+      "code": "SYN-VB-SPARK-01",
+      "brand": "Open Parts Demo",
+      "label": "Jogo de velas (demo)",
+      "category": "ignition",
+      "safetyClass": "wear-item",
+      "fitsVehicleIds": ["vectra-b-br"]
+    },
+    {
+      "id": "syn-spark-c",
+      "code": "SYN-VC-SPARK-01",
+      "brand": "Open Parts Demo",
+      "label": "Jogo de velas (demo gen. C)",
+      "category": "ignition",
+      "safetyClass": "wear-item",
+      "fitsVehicleIds": ["vectra-c-br"]
+    },
+    {
+      "id": "syn-wiper-front",
+      "code": "SYN-VB-WIPER-F-01",
+      "brand": "Open Parts Demo",
+      "label": "Palheta dianteira (demo)",
+      "category": "wipers",
+      "safetyClass": "wear-item",
+      "fitsVehicleIds": ["vectra-b-br"]
+    },
+    {
+      "id": "syn-wiper-front-c",
+      "code": "SYN-VC-WIPER-F-01",
+      "brand": "Open Parts Demo",
+      "label": "Palheta dianteira (demo gen. C)",
+      "category": "wipers",
+      "safetyClass": "wear-item",
+      "fitsVehicleIds": ["vectra-c-br"]
+    },
+    {
+      "id": "syn-bulb-h4",
+      "code": "SYN-SHARED-BULB-H4",
+      "brand": "Open Parts Demo",
+      "label": "Lâmpada H4 (demo compartilhada)",
+      "category": "electrical",
+      "safetyClass": "wear-item",
+      "fitsVehicleIds": ["vectra-b-br", "vectra-c-br"],
+      "notes": "Demo de item de consumo genérico — confirme soquete e farol no veículo real."
+    },
+    {
+      "id": "syn-battery-60",
+      "code": "SYN-SHARED-BAT-60",
+      "brand": "Open Parts Demo",
+      "label": "Bateria 60Ah (demo)",
+      "category": "electrical",
+      "safetyClass": "wear-item",
+      "fitsVehicleIds": ["vectra-b-br", "vectra-c-br"]
+    },
+    {
+      "id": "syn-belt-alt",
+      "code": "SYN-VB-BELT-ALT-01",
+      "brand": "Open Parts Demo",
+      "label": "Correia do alternador (demo)",
+      "category": "belt",
+      "safetyClass": "wear-item",
+      "fitsVehicleIds": ["vectra-b-br"]
+    },
+    {
+      "id": "syn-belt-alt-c",
+      "code": "SYN-VC-BELT-ALT-01",
+      "brand": "Open Parts Demo",
+      "label": "Correia do alternador (demo gen. C)",
+      "category": "belt",
+      "safetyClass": "wear-item",
+      "fitsVehicleIds": ["vectra-c-br"]
+    },
+    {
+      "id": "syn-thermo-b",
+      "code": "SYN-VB-THERMO-01",
+      "brand": "Open Parts Demo",
+      "label": "Termostato (demo)",
+      "category": "cooling",
+      "safetyClass": "wear-item",
+      "fitsVehicleIds": ["vectra-b-br"]
+    },
+    {
+      "id": "syn-thermo-c",
+      "code": "SYN-VC-THERMO-01",
+      "brand": "Open Parts Demo",
+      "label": "Termostato (demo gen. C)",
+      "category": "cooling",
+      "safetyClass": "wear-item",
+      "fitsVehicleIds": ["vectra-c-br"]
+    },
+    {
+      "id": "syn-coolant-tank",
+      "code": "SYN-VC-COOL-TANK-01",
+      "brand": "Open Parts Demo",
+      "label": "Reservatório de expansão (demo)",
+      "category": "cooling",
+      "safetyClass": "non-critical",
+      "fitsVehicleIds": ["vectra-c-br"]
+    },
+    {
+      "id": "syn-door-handle-b",
+      "code": "SYN-VB-HANDLE-FL",
+      "brand": "Open Parts Demo",
+      "label": "Maçaneta externa dianteira esq. (demo)",
+      "category": "body",
+      "safetyClass": "non-critical",
+      "fitsVehicleIds": ["vectra-b-br"]
+    },
+    {
+      "id": "syn-mirror-c",
+      "code": "SYN-VC-MIRROR-R",
+      "brand": "Open Parts Demo",
+      "label": "Retrovisor externo direito (demo)",
+      "category": "body",
+      "safetyClass": "non-critical",
+      "fitsVehicleIds": ["vectra-c-br"]
+    },
+    {
+      "id": "syn-o2-sensor-b",
+      "code": "SYN-VB-O2-01",
+      "brand": "Open Parts Demo",
+      "label": "Sonda lambda (demo)",
+      "category": "sensor",
+      "safetyClass": "wear-item",
+      "fitsVehicleIds": ["vectra-b-br"]
+    },
+    {
+      "id": "syn-o2-sensor-c",
+      "code": "SYN-VC-O2-01",
+      "brand": "Open Parts Demo",
+      "label": "Sonda lambda (demo gen. C)",
+      "category": "sensor",
+      "safetyClass": "wear-item",
+      "fitsVehicleIds": ["vectra-c-br"]
     },
     {
       "id": "syn-brake-pad-front",
       "code": "SYN-VB-BRAKE-F-01",
       "brand": "Open Parts Demo",
-      "label": "Front brake pad set (demo)",
+      "label": "Pastilha dianteira (demo)",
       "category": "brakes",
       "safetyClass": "safety-critical",
       "fitsVehicleIds": ["vectra-b-br"]
@@ -90,10 +262,19 @@
       "id": "syn-brake-pad-alt",
       "code": "SYN-VB-BRAKE-F-ALT",
       "brand": "Open Parts Demo",
-      "label": "Front brake pad set alternate box (demo)",
+      "label": "Pastilha dianteira embalagem alt. (demo)",
       "category": "brakes",
       "safetyClass": "safety-critical",
       "fitsVehicleIds": ["vectra-b-br"]
+    },
+    {
+      "id": "syn-brake-pad-c",
+      "code": "SYN-VC-BRAKE-F-01",
+      "brand": "Open Parts Demo",
+      "label": "Pastilha dianteira gen. C (demo)",
+      "category": "brakes",
+      "safetyClass": "safety-critical",
+      "fitsVehicleIds": ["vectra-c-br"]
     }
   ],
   "equivalences": [
@@ -102,12 +283,64 @@
       "fromPartId": "syn-cabin-filter-b",
       "toPartId": "syn-cabin-filter-c",
       "confidence": "synthetic",
-      "reason": "Demo-only packaging alias to exercise cross-generation search UI. Not a real B↔C cabin-filter claim.",
+      "reason": "Alias de embalagem só para demo da UI entre gerações. Não é claim real B↔C de filtro de cabine.",
       "bidirectional": true,
       "provenance": {
         "kind": "synthetic-demo",
-        "summary": "Invented for Open Parts alpha fixtures",
-        "accessed": "2026-08-08"
+        "summary": "Inventado para fixtures do Open Parts",
+        "accessed": "2026-08-09"
+      }
+    },
+    {
+      "id": "eq-air-b-c-demo",
+      "fromPartId": "syn-air-filter-b",
+      "toPartId": "syn-air-filter-c",
+      "confidence": "synthetic",
+      "reason": "Aresta sintética para exercitar busca cross-generation em filtros de ar.",
+      "bidirectional": true,
+      "provenance": {
+        "kind": "synthetic-demo",
+        "summary": "Fixture sintético de demonstração",
+        "accessed": "2026-08-09"
+      }
+    },
+    {
+      "id": "eq-fuel-b-c-demo",
+      "fromPartId": "syn-fuel-filter-b",
+      "toPartId": "syn-fuel-filter-c",
+      "confidence": "synthetic",
+      "reason": "Demo de embalagens distintas de filtro de combustível — valide no veículo real.",
+      "bidirectional": true,
+      "provenance": {
+        "kind": "synthetic-demo",
+        "summary": "Fixture sintético de demonstração",
+        "accessed": "2026-08-09"
+      }
+    },
+    {
+      "id": "eq-wiper-b-c-demo",
+      "fromPartId": "syn-wiper-front",
+      "toPartId": "syn-wiper-front-c",
+      "confidence": "synthetic",
+      "reason": "Demo de palhetas por geração; comprimento e encaixe podem divergir.",
+      "bidirectional": true,
+      "provenance": {
+        "kind": "synthetic-demo",
+        "summary": "Fixture sintético de demonstração",
+        "accessed": "2026-08-09"
+      }
+    },
+    {
+      "id": "eq-spark-narrative",
+      "fromPartId": "syn-spark-b",
+      "toPartId": "syn-spark-c",
+      "confidence": "community-proposed",
+      "reason": "Proposta comunitária fictícia para UI: motores Family II são citados em ambas as eras, sem prova de mesmo eletrodo/grau térmico.",
+      "bidirectional": true,
+      "provenance": {
+        "kind": "synthetic-demo",
+        "summary": "Exemplo de confiança community-proposed",
+        "accessed": "2026-08-09"
       }
     },
     {
@@ -115,12 +348,12 @@
       "fromPartId": "syn-oil-filter-shared",
       "toPartId": "syn-cabin-filter-b",
       "confidence": "do-not-advise",
-      "reason": "Intentionally invalid cross-category link to prove the engine blocks unsafe advice paths.",
+      "reason": "Ligação inválida entre categorias, proposital, para provar bloqueio de orientação insegura.",
       "bidirectional": false,
       "provenance": {
         "kind": "synthetic-demo",
-        "summary": "Negative fixture for safety policy tests",
-        "accessed": "2026-08-08"
+        "summary": "Fixture negativo de política de segurança",
+        "accessed": "2026-08-09"
       }
     },
     {
@@ -128,12 +361,25 @@
       "fromPartId": "syn-brake-pad-front",
       "toPartId": "syn-brake-pad-alt",
       "confidence": "do-not-advise",
-      "reason": "Safety-critical brake equivalence is refused in alpha unless a curated source exists.",
+      "reason": "Equivalência de freio bloqueada no alpha sem fonte curada.",
       "bidirectional": true,
       "provenance": {
         "kind": "curator-note",
-        "summary": "Open Parts safety policy default for brakes in alpha",
-        "accessed": "2026-08-08"
+        "summary": "Política de segurança do Open Parts para freios no alpha",
+        "accessed": "2026-08-09"
+      }
+    },
+    {
+      "id": "eq-brake-b-c-blocked",
+      "fromPartId": "syn-brake-pad-front",
+      "toPartId": "syn-brake-pad-c",
+      "confidence": "do-not-advise",
+      "reason": "Não cruzar pastilhas B↔C sem evidência curada — categoria de segurança.",
+      "bidirectional": true,
+      "provenance": {
+        "kind": "curator-note",
+        "summary": "Política de segurança do Open Parts para freios no alpha",
+        "accessed": "2026-08-09"
       }
     }
   ]

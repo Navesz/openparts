@@ -1,5 +1,6 @@
 <script lang="ts">
   import { base } from '$app/paths';
+  import { pt } from '$lib/i18n/pt';
   import '../app.css';
 </script>
 
@@ -15,10 +16,10 @@
 
 <div class="topbar">
   <a class="topbrand" href="{base}/">Open Parts</a>
-  <nav aria-label="Primary">
-    <a href="{base}/">Search</a>
-    <a href="{base}/catalog/">Catalog</a>
-    <a href="{base}/about/">About</a>
+  <nav aria-label="Principal">
+    <a href="{base}/">{pt.nav.search}</a>
+    <a href="{base}/catalog/">{pt.nav.catalog}</a>
+    <a href="{base}/about/">{pt.nav.about}</a>
   </nav>
 </div>
 
@@ -26,8 +27,7 @@
 
 <footer class="site-footer">
   <p>
-    Alpha · Chevrolet Vectra BR fixtures ·
+    {pt.footer} ·
     <a href="https://github.com/Navesz/openparts">GitHub</a>
-    · not a fitment guarantee
   </p>
 </footer>

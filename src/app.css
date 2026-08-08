@@ -207,6 +207,76 @@ button.secondary {
   border-left: 4px solid var(--brand);
 }
 
+.hero-with-media {
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+}
+
+.hero-figure {
+  margin: 0;
+  border-radius: 1.1rem;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.hero-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.hit-media {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.85rem;
+  align-items: start;
+}
+
+.cat-icon {
+  border-radius: 0.85rem;
+}
+
+.vehicle-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 0.85rem;
+}
+
+.vehicle-art {
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid var(--line);
+  margin-bottom: 0.75rem;
+  background: #fff;
+}
+
+.parts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.75rem;
+}
+
+.part-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 0.85rem;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+@media (max-width: 900px) {
+  .hero-with-media {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 .topbar {
   display: flex;
   justify-content: space-between;

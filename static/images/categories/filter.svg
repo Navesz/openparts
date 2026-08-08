@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Filtro">
+  <rect width="128" height="128" rx="24" fill="#dff3ea"/>
+  <rect x="34" y="28" width="60" height="72" rx="12" fill="#0f6b4c"/>
+  <path d="M46 40 h36 M46 52 h36 M46 64 h36 M46 76 h36" stroke="#dff3ea" stroke-width="4" stroke-linecap="round"/>
+</svg>
