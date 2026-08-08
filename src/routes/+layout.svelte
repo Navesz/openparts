@@ -14,6 +14,7 @@
   <title>Open Parts</title>
 </svelte:head>
 
+<a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
 <div class="topbar">
   <a class="topbrand" href="{base}/">Open Parts</a>
   <nav aria-label="Principal">
@@ -25,8 +26,9 @@
   </nav>
 </div>
 
-<slot />
-
+<div id="conteudo" tabindex="-1">
+  <slot />
+</div>
 <footer class="site-footer">
   <p>
     {pt.footer} ·

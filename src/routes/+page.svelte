@@ -208,7 +208,7 @@
               {#if hit.applications.length}
                 <div class="apps">
                   <strong class="meta">{t.applications}:</strong>
-                  <ul class="app-list">
+                  <ul class="app-list" aria-label={t.applications}>
                     {#each hit.applications as app}
                       <li>
                         <img
@@ -216,6 +216,7 @@
                           alt=""
                           width="72"
                           height="32"
+                          role="presentation"
                         />
                         <span
                           >{app.make}
