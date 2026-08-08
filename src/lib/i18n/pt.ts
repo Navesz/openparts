@@ -4,25 +4,27 @@ export const pt = {
   nav: {
     search: 'Busca',
     catalog: 'Catálogo',
-    about: 'Sobre'
+    about: 'Sobre',
+    platforms: 'Plataformas',
+    sources: 'Fontes'
   },
-  footer:
-    'Alpha · fixtures Chevrolet Vectra BR · não é garantia de encaixe',
+  footer: 'Alpha · cross-reference educacional GM Brasil · não é garantia de encaixe',
   search: {
-    eyebrow: 'local-first · Vectra alpha',
+    eyebrow: 'local-first · batida de peças · GM Brasil',
     title: 'Open Parts',
-    lede:
-      'Consulte códigos de peças do Chevrolet Vectra e veja candidatos de equivalência com confiança e proveniência explícitas. Este alpha usa SKUs sintéticos de propósito — não inventa números OEM reais.',
+    lede: 'Pesquise um código e veja aplicações e equivalentes com confiança e proveniência. O alpha usa SKUs sintéticos (SYN-*) — não inventa OEM. Para batida profissional, combine com CepChev/TecDoc/Nakata.',
     banner:
-      'Não é certificado de encaixe. Confira antes de comprar ou instalar. Categorias de segurança começam em do-not-advise neste alpha.',
+      'Não é certificado de encaixe nem catálogo GM oficial. Confira o código gravado, ano/versão e injeção (EFI/MPFI) antes de comprar.',
     codeLabel: 'Código ou texto',
-    codePlaceholder: 'ex.: SYN-VB-CABIN-01',
+    codePlaceholder: 'ex.: SYN-FAMILY2-OIL-01',
     vehicleLabel: 'Filtro de veículo',
-    allVehicles: 'Todos os fixtures Vectra',
+    allVehicles: 'Todos os fixtures do catálogo',
     search: 'Buscar',
-    demo: 'Demo',
+    demo: 'Demo Vectra',
     probeUnknown: 'Testar código desconhecido',
     probeBrake: 'Testar recusa de freio',
+    tryFamily2: 'Demo Família II (óleo)',
+    tryFamily1: 'Demo Família I (termostato)',
     saveProject: 'Salvar .oparts.json',
     loadProject: 'Carregar .oparts.json',
     notesLabel: 'Notas locais (só no seu .oparts.json)',
@@ -38,6 +40,7 @@ export const pt = {
     relatedTo: 'Relacionado a',
     provenance: 'Proveniência',
     source: 'fonte',
+    applications: 'Aplicações neste catálogo',
     vehiclesHeading: 'Veículos do fixture',
     downloaded: 'Arquivo .oparts.json baixado.',
     loadedAt: 'Projeto carregado em',
@@ -59,27 +62,26 @@ export const pt = {
   },
   about: {
     title: 'Sobre',
-    lede:
-      'Open Parts é um laboratório local-first para explorar equivalência de peças do Chevrolet Vectra com confiança, proveniência e limites de segurança explícitos.',
+    lede: 'Open Parts é um laboratório local-first de cross-reference (intercambiabilidade) para Chevrolet/GM no Brasil, começando pelo Vectra e famílias de plataforma.',
     isTitle: 'O que este alpha é',
     isItems: [
-      'Ferramenta de engenharia e educação com fixtures Vectra BR',
-      'Busca determinística sobre um catálogo versionado',
-      'Falha honesta para códigos desconhecidos e arestas bloqueadas',
-      'Notas .oparts.json locais que não saem do seu aparelho até você exportar'
+      'Busca código → aplicações em vários veículos do fixture',
+      'Equivalências com confiança e proveniência explícitas',
+      'Educação sobre Família I / Família II / compartilhamento de plataforma',
+      'Links para ferramentas profissionais externas (sem scrapear catálogos)'
     ],
     isNotTitle: 'O que este alpha não é',
     isNotItems: [
-      'Ordem de serviço ou certificado de encaixe',
-      'Substituição de TecDoc / EPC da montadora',
-      'Scraper de catálogos proprietários',
-      'Cobertura de todos os veículos GM / Chevrolet'
+      'CepChev, TecDoc, EPC GM ou loja de peças',
+      'Garantia de que a peça “serve” no seu carro',
+      'Dump de dados proprietários',
+      'Cobertura completa de todos os GM'
     ],
     safetyTitle: 'Segurança',
     safetyBody:
-      'Leia docs/SAFETY.md no repositório. Freio, direção, airbag e categorias semelhantes começam em do-not-advise, salvo evidência curada.',
+      'Leia docs/SAFETY.md. Freio, direção e airbag começam em do-not-advise sem evidência curada.',
     contributeTitle: 'Contribuir',
-    contributeBody: 'Docs em inglês e UI em português neste alpha. Comece em'
+    contributeBody: 'UI em português. Comece em'
   },
   categories: {
     filter: 'Filtro',

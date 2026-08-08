@@ -4,11 +4,11 @@
 
 Open Parts is pre-1.0. Fixes target `main` and the latest tagged pre-release.
 
-| Version | Supported |
-|---|---|
-| `main` | Best effort |
+| Version                   | Supported           |
+| ------------------------- | ------------------- |
+| `main`                    | Best effort         |
 | Latest tagged pre-release | Yes, once published |
-| Older pre-releases | No |
+| Older pre-releases        | No                  |
 
 ## Report a vulnerability privately
 

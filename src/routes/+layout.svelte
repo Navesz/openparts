@@ -19,6 +19,8 @@
   <nav aria-label="Principal">
     <a href="{base}/">{pt.nav.search}</a>
     <a href="{base}/catalog/">{pt.nav.catalog}</a>
+    <a href="{base}/plataformas/">{pt.nav.platforms}</a>
+    <a href="{base}/fontes/">{pt.nav.sources}</a>
     <a href="{base}/about/">{pt.nav.about}</a>
   </nav>
 </div>

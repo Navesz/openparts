@@ -1,7 +1,7 @@
 name: Feature proposal
 description: Propose a scoped Open Parts improvement
-title: "[Feature]: "
-labels: ["type: feature", "needs-triage"]
+title: '[Feature]: '
+labels: ['type: feature', 'needs-triage']
 body:
   - type: textarea
     id: problem

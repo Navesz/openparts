@@ -45,13 +45,13 @@ $env:BASE_PATH="/openparts"; npm run build
 
 ## Repository map
 
-| Layer | Role |
-|---|---|
-| `src/lib/domain` | Framework-free interchange engine |
-| `src/routes` | Search, Catalog, About UI |
-| `data/fixtures` | Vectra fixtures with provenance |
-| `packages/schemas` | JSON Schema for catalog + `.oparts.json` |
-| `docs` | Product, safety, validation, objectives, handoff |
+| Layer              | Role                                             |
+| ------------------ | ------------------------------------------------ |
+| `src/lib/domain`   | Framework-free interchange engine                |
+| `src/routes`       | Busca, Catálogo, Plataformas, Fontes, Sobre      |
+| `data/fixtures`    | Vectra fixtures with provenance                  |
+| `packages/schemas` | JSON Schema for catalog + `.oparts.json`         |
+| `docs`             | Product, safety, validation, objectives, handoff |
 
 ## Safety and honesty
 

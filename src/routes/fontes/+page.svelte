@@ -1,0 +1,71 @@
+<main class="shell">
+  <section class="hero">
+    <h1 class="brand">Fontes externas</h1>
+    <p class="lede">
+      Open Parts <strong>não copia</strong> catálogos proprietários. Use estas ferramentas para a batida
+      real (código → aplicações → equivalentes aftermarket).
+    </p>
+  </section>
+
+  <section class="panel">
+    <h2>Cross-reference / intercambiabilidade</h2>
+    <ul class="source-list">
+      <li>
+        <a href="https://cepchev.com.br/" rel="noreferrer" target="_blank">CepChev</a> — forte em Chevrolet/GM
+        Brasil: código GM → aplicações, anos e relacionados. Independente da GM; trate como estimativa
+        e confirme pelo OEM.
+      </li>
+      <li>
+        <a href="https://www.tecalliance.net/" rel="noreferrer" target="_blank"
+          >TecDoc / TecAlliance</a
+        >
+        — base profissional mundial OE ↔ aftermarket (pago/profissional).
+      </li>
+      <li>
+        <a href="https://www.nakata.com.br/" rel="noreferrer" target="_blank"
+          >Nakata / Auto Experts</a
+        >
+        — referência cruzada aftermarket (suspensão, direção, etc.).
+      </li>
+      <li>
+        <a href="https://7zap.com/" rel="noreferrer" target="_blank">7zap</a> — EPC/diagramas e análogos;
+        atenção ao mercado (Europa ≠ Brasil).
+      </li>
+      <li>
+        <a href="https://www.sabo.com.br/" rel="noreferrer" target="_blank">Catálogo SABÓ</a> — motor/vedação
+        (juntas, retentores).
+      </li>
+    </ul>
+
+    <h2>Lojas / catálogos citados por você</h2>
+    <ul class="source-list">
+      <li>
+        <a href="https://www.pecachevrolet.com.br/catalogo" rel="noreferrer" target="_blank"
+          >Peça Chevrolet (catálogo)</a
+        >
+      </li>
+      <li>
+        <a href="https://www.acciolygm.com.br/" rel="noreferrer" target="_blank">Accioly GM</a>
+      </li>
+      <li>
+        <a
+          href="https://loja.chevroletnova.com.br/pecas-genuinas-gm"
+          rel="noreferrer"
+          target="_blank">Chevrolet Nova — peças genuínas</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://www.euautopecas.pt/pecas-originais/chevrolet"
+          rel="noreferrer"
+          target="_blank">Eu Autopeças (PT) — originais Chevrolet</a
+        >
+      </li>
+    </ul>
+
+    <div class="banner" role="note">
+      Open Parts não faz scraping desses sites para o repositório. Se quiser contribuir com uma
+      equivalência, abra PR com proveniência redistribuível e código verificado — nunca invente OEM.
+    </div>
+  </section>
+</main>

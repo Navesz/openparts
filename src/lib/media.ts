@@ -1,8 +1,10 @@
 import { base } from '$app/paths';
 
-export function vehicleImage(generation: string): string {
-  const key = generation === 'C' ? 'vectra-c' : 'vectra-b';
-  return `${base}/images/vehicles/${key}.svg`;
+export function vehicleImage(model: string, generation: string): string {
+  const m = model.toLowerCase();
+  if (m === 'vectra' && generation === 'C') return `${base}/images/vehicles/vectra-c.svg`;
+  if (m === 'vectra') return `${base}/images/vehicles/vectra-b.svg`;
+  return `${base}/images/vehicles/chevrolet-generic.svg`;
 }
 
 export function categoryImage(category: string): string {
