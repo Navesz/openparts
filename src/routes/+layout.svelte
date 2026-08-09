@@ -33,5 +33,7 @@
   <p>
     {pt.footer} ·
     <a href="https://github.com/Navesz/openparts">GitHub</a>
+    ·
+    <a href="{base}/creditos/">Créditos das fotos</a>
   </p>
 </footer>

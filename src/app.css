@@ -238,8 +238,8 @@ button.secondary {
 }
 
 .hero-with-media {
-  grid-template-columns: 1.1fr 0.9fr;
-  align-items: center;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: stretch;
 }
 
 .hero-figure {
@@ -248,13 +248,16 @@ button.secondary {
   overflow: hidden;
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
+  min-height: 280px;
+  background: #1c241f;
 }
 
 .hero-figure img {
   display: block;
   width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9;
+  height: 100%;
+  min-height: 280px;
+  aspect-ratio: 16 / 10;
   object-fit: cover;
 }
 
@@ -265,10 +268,6 @@ button.secondary {
   align-items: start;
 }
 
-.cat-icon {
-  border-radius: 0.85rem;
-}
-
 .vehicle-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -277,10 +276,19 @@ button.secondary {
 
 .vehicle-art {
   width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
   border-radius: 0.75rem;
   border: 1px solid var(--line);
   margin-bottom: 0.75rem;
-  background: #fff;
+  background: #1c241f;
+}
+
+.cat-icon {
+  border-radius: 0.85rem;
+  object-fit: cover;
+  width: 56px;
+  height: 56px;
 }
 
 .parts-grid {
@@ -319,8 +327,10 @@ button.secondary {
 .app-list img {
   border-radius: 0.35rem;
   border: 1px solid var(--line);
-  background: #fff;
+  background: #1c241f;
   object-fit: cover;
+  width: 72px;
+  height: 40px;
 }
 
 .source-list {

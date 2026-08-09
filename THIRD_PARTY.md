@@ -6,11 +6,8 @@ Runtime and development dependencies are declared in `package.json`,
 `pnpm-lock.yaml`, `pyproject.toml`, and `uv.lock`. Review licenses before
 redistributing builds.
 
-## Data
+## Media
 
-Alpha fixtures under `data/fixtures/vectra/` are either:
-
-- `synthetic` — invented codes for UI/CI only; not real OEM numbers; or
-- `curated` — added only with explicit provenance notes in the fixture file.
-
-Do not commit scraped proprietary EPC/TecDoc extracts.
+Alpha UI photos are documented in [docs/IMAGE_CREDITS.md](docs/IMAGE_CREDITS.md)
+(Wikimedia Commons CC / public-domain / CC0). Do not replace them with scraped
+dealer or TecDoc assets.
