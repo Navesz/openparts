@@ -274,14 +274,86 @@ button.secondary {
   gap: 0.85rem;
 }
 
-.vehicle-art {
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
-  border-radius: 0.75rem;
+.vehicle-card {
+  display: grid;
+  gap: 0;
+  text-decoration: none;
+  color: inherit;
+  background: var(--card);
   border: 1px solid var(--line);
-  margin-bottom: 0.75rem;
-  background: #1c241f;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.vehicle-card:hover,
+.vehicle-card:focus-visible {
+  transform: translateY(-3px);
+  border-color: var(--brand);
+  box-shadow: 0 22px 48px rgba(28, 36, 31, 0.14);
+}
+
+.vehicle-card .vehicle-art {
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  aspect-ratio: 16 / 10;
+}
+
+.vehicle-card-body {
+  padding: 0.9rem 1rem 1.1rem;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.vehicle-cta,
+.vehicle-cta-inline {
+  color: var(--brand);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.vehicle-cta-inline {
+  display: inline;
+  margin-left: 0.35rem;
+  font-size: 0.85rem;
+}
+
+.app-link {
+  display: flex;
+  gap: 0.55rem;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 0.5rem;
+  padding: 0.2rem;
+}
+
+.app-link:hover,
+.app-link:focus-visible {
+  background: rgba(15, 107, 76, 0.08);
+}
+
+.part-link {
+  text-decoration: none;
+  color: inherit;
+  transition:
+    border-color 160ms ease,
+    transform 160ms ease;
+}
+
+.part-link:hover,
+.part-link:focus-visible {
+  border-color: var(--brand);
+  transform: translateY(-2px);
+}
+
+.vehicle-hero .lede {
+  margin-bottom: 0.5rem;
 }
 
 .cat-icon {

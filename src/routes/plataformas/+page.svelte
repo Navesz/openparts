@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { getVehicles } from '$lib/search';
-  import { vehicleImage } from '$lib/media';
+  import { getVehicles, listPartsForVehicle } from '$lib/search';
+  import VehicleCard from '$lib/components/VehicleCard.svelte';
 
   const vehicles = getVehicles();
   const families = [...new Set(vehicles.map((v) => v.platformFamily).filter(Boolean))];
@@ -10,8 +10,9 @@
   <section class="hero">
     <h1 class="brand">Plataformas GM</h1>
     <p class="lede">
-      Muitos Chevrolets compartilham base ou motor. Isso ajuda a <strong>investigar</strong>, mas
-      não substitui o código gravado na peça nem um catálogo profissional.
+      Muitos Chevrolets compartilham base ou motor. Clique em um carro para ver as peças do fixture.
+      Isso ajuda a <strong>investigar</strong>, mas não substitui o código gravado nem um catálogo
+      profissional.
     </p>
   </section>
 
@@ -19,24 +20,20 @@
     <h2>Famílias usadas neste alpha</h2>
     <ul>
       <li>
-        <strong>Família I (1.0 / 1.4 / 1.8)</strong> — narrativa educacional: Corsa, Celta, Prisma,
-        Meriva (e Montana antiga na literatura de oficina). Sensores/bobinas/termostatos costumam
-        ser parecidos; geração e injeção mudam tudo. Demos: <code>SYN-FAMILY1-THERMO-01</code>,
-        <code>SYN-FAMILY1-COIL-01</code>, <code>SYN-FAMILY1-O2-01</code>.
+        <strong>Família I (1.0 / 1.4 / 1.8)</strong> — Corsa, Celta, Prisma, Meriva. Demos:
+        <code>SYN-FAMILY1-THERMO-01</code>, <code>SYN-FAMILY1-COIL-01</code>,
+        <code>SYN-FAMILY1-O2-01</code>.
       </li>
       <li>
-        <strong>Família II (2.0 / 2.4)</strong> — Monza, Vectra, Astra, Zafira: componentes
-        mecânicos e de ignição frequentemente discutidos juntos. Demo:
+        <strong>Família II (2.0 / 2.4)</strong> — Monza, Vectra, Astra, Zafira. Demo:
         <code>SYN-FAMILY2-OIL-01</code>.
       </li>
       <li>
-        <strong>Ecotec (moderno)</strong> — Cruze/Sonic/Tracker: fora do fixture atual; exige atenção
-        a juntas/retentores mesmo quando “parece igual”.
+        <strong>Ecotec (moderno)</strong> — Cruze/Sonic/Tracker: fora do fixture atual.
       </li>
     </ul>
     <div class="banner" role="note">
-      Dica: anote modelo + ano + motor + peça exata + código OEM. Fluxo profissional sugerido:
-      código gravado → CepChev → TecDoc/Nakata → confirmar no veículo.
+      Fluxo: escolher o carro → ver peças → abrir código na busca → confirmar no CepChev/TecDoc.
     </div>
   </section>
 
@@ -45,12 +42,7 @@
       <h2>{family}</h2>
       <div class="vehicle-grid">
         {#each vehicles.filter((v) => v.platformFamily === family) as v}
-          <article class="vehicle">
-            <img class="vehicle-art" src={vehicleImage(v.model, v.generation)} alt="" />
-            <strong>{v.model} {v.generation}</strong>
-            <div class="meta">{v.years}</div>
-            <p class="meta">{v.notes}</p>
-          </article>
+          <VehicleCard vehicle={v} partCount={listPartsForVehicle(v.id).length} compact />
         {/each}
       </div>
     </section>

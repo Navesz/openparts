@@ -12,7 +12,7 @@ export const pt = {
   search: {
     eyebrow: 'local-first · batida de peças · GM Brasil',
     title: 'Open Parts',
-    lede: 'Pesquise um código e veja aplicações e equivalentes com confiança e proveniência. O alpha usa SKUs sintéticos (SYN-*) — não inventa OEM. Para batida profissional, combine com CepChev/TecDoc/Nakata.',
+    lede: 'Clique em um carro para ver as peças, ou pesquise um código e veja aplicações/equivalências com confiança. SKUs sintéticos (SYN-*) — não inventa OEM. Batida profissional: CepChev/TecDoc/Nakata.',
     banner:
       'Não é certificado de encaixe nem catálogo GM oficial. Confira o código gravado, ano/versão e injeção (EFI/MPFI) antes de comprar.',
     codeLabel: 'Código ou texto',
@@ -44,7 +44,8 @@ export const pt = {
     provenance: 'Proveniência',
     source: 'fonte',
     applications: 'Aplicações neste catálogo',
-    vehiclesHeading: 'Veículos do fixture',
+    vehiclesHeading: 'Escolha um carro para ver as peças',
+    clickVehicle: 'Clique no carro para ver as peças do fixture',
     downloaded: 'Arquivo .oparts.json baixado.',
     loadedAt: 'Projeto carregado em',
     importFail: 'Falha ao importar o projeto'
@@ -53,7 +54,7 @@ export const pt = {
     title: 'Catálogo',
     parts: 'Peças',
     equivalences: 'Equivalências',
-    vehicles: 'Veículos',
+    vehicles: 'Veículos — clique para ver peças',
     code: 'Código',
     label: 'Nome',
     category: 'Categoria',
@@ -96,6 +97,19 @@ export const pt = {
     wipers: 'Limpadores',
     belt: 'Correias',
     sensor: 'Sensor'
+  },
+  vehicle: {
+    eyebrow: 'peças do veículo · fixture sintético',
+    banner:
+      'Lista educacional do catálogo demo. Clique numa peça para abrir a busca com equivalências e confiança. Não é EPC GM.',
+    partsHeading: 'Peças neste fixture',
+    noParts: 'Nenhuma peça listada para este veículo no alpha.',
+    openInSearch: 'Abrir na busca →',
+    sourcesHeading: 'Fontes / proveniência do veículo',
+    sourceLink: 'abrir',
+    backSearch: 'Voltar à busca',
+    backPlatforms: 'Plataformas',
+    notFound: 'Veículo não encontrado neste fixture alpha.'
   }
 } as const;
 

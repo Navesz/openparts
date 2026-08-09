@@ -4,9 +4,11 @@
     getCatalogName,
     listEquivalences,
     listParts,
+    listPartsForVehicle,
     getVehicles
   } from '$lib/search';
-  import { categoryImage, vehicleImage } from '$lib/media';
+  import { categoryImage } from '$lib/media';
+  import VehicleCard from '$lib/components/VehicleCard.svelte';
   import { pt } from '$lib/i18n/pt';
 
   const name = getCatalogName();
@@ -27,12 +29,21 @@
     <p class="lede">{name}: {description}</p>
   </section>
 
-  <section class="panel">
+  <section class="vehicles">
+    <h2>{t.vehicles}</h2>
+    <div class="vehicle-grid">
+      {#each vehicles as v}
+        <VehicleCard vehicle={v} partCount={listPartsForVehicle(v.id).length} />
+      {/each}
+    </div>
+  </section>
+
+  <section class="panel" style="margin-top:1rem;">
     <h2>{t.parts} ({parts.length})</h2>
     <div class="parts-grid">
       {#each parts as p}
         <article class="part-card">
-          <img src={categoryImage(p.category)} alt="" width="48" height="48" />
+          <img src={categoryImage(p.category)} alt="" width="48" height="48" class="cat-icon" />
           <div>
             <strong class="mono">{p.code}</strong>
             <div>{p.label}</div>
@@ -68,27 +79,6 @@
           {/each}
         </tbody>
       </table>
-    </div>
-  </section>
-
-  <section class="vehicles">
-    <h2>{t.vehicles}</h2>
-    <div class="vehicle-grid">
-      {#each vehicles as v}
-        <article class="panel vehicle">
-          <img
-            class="vehicle-art"
-            src={vehicleImage(v.model, v.generation)}
-            alt="Silhueta {v.model} {v.generation}"
-          />
-          <strong>{v.make} {v.model} {v.generation}</strong>
-          <div class="meta">
-            {v.years}{#if v.platformFamily}
-              · {v.platformFamily}{/if}
-          </div>
-          <p>{v.notes}</p>
-        </article>
-      {/each}
     </div>
   </section>
 </main>

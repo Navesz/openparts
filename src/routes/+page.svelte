@@ -1,13 +1,19 @@
 <script lang="ts">
-  import { getCatalogName, getVehicles, runSearch } from '$lib/search';
+  import { onMount } from 'svelte';
+  import { base } from '$app/paths';
+  import { getCatalogName, getVehicles, listPartsForVehicle, runSearch } from '$lib/search';
   import { createProject, parseProject, serializeProject } from '$lib/domain/projectFile';
   import { categoryImage, heroImage, vehicleImage } from '$lib/media';
+  import VehicleCard from '$lib/components/VehicleCard.svelte';
   import { pt } from '$lib/i18n/pt';
   import type { SearchResult } from '$lib/domain/types';
 
   const vehicles = getVehicles();
   const catalogName = getCatalogName();
   const t = pt.search;
+  const partCounts = Object.fromEntries(
+    vehicles.map((v) => [v.id, listPartsForVehicle(v.id).length])
+  );
 
   let query = $state('SYN-FAMILY2-OIL-01');
   let vehicleId = $state('');
@@ -94,6 +100,19 @@
   function categoryLabel(category: string): string {
     return (pt.categories as Record<string, string>)[category] ?? category;
   }
+
+  function vehicleHref(id: string): string {
+    return `${base}/veiculo/${id}/`;
+  }
+
+  onMount(() => {
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get('code');
+    const vehicle = params.get('vehicle');
+    if (code) query = code;
+    if (vehicle) vehicleId = vehicle;
+    if (code || vehicle) search();
+  });
 
   search();
 </script>
@@ -211,19 +230,22 @@
                   <ul class="app-list" aria-label={t.applications}>
                     {#each hit.applications as app}
                       <li>
-                        <img
-                          src={vehicleImage(app.model, app.generation)}
-                          alt=""
-                          width="72"
-                          height="32"
-                          role="presentation"
-                        />
-                        <span
-                          >{app.make}
-                          {app.model}
-                          {app.generation} ({app.years}){#if app.platformFamily}
-                            · {app.platformFamily}{/if}</span
-                        >
+                        <a class="app-link" href={vehicleHref(app.id)}>
+                          <img
+                            src={vehicleImage(app.model, app.generation)}
+                            alt=""
+                            width="72"
+                            height="40"
+                            role="presentation"
+                          />
+                          <span
+                            >{app.make}
+                            {app.model}
+                            {app.generation} ({app.years}){#if app.platformFamily}
+                              · {app.platformFamily}{/if}
+                            <span class="vehicle-cta-inline">ver peças →</span></span
+                          >
+                        </a>
                       </li>
                     {/each}
                   </ul>
@@ -256,21 +278,10 @@
 
   <section class="vehicles">
     <h2>{t.vehiclesHeading}</h2>
+    <p class="meta">{t.clickVehicle}</p>
     <div class="vehicle-grid">
       {#each vehicles as v}
-        <article class="panel vehicle">
-          <img
-            class="vehicle-art"
-            src={vehicleImage(v.model, v.generation)}
-            alt="Silhueta {v.model} {v.generation}"
-          />
-          <strong>{v.make} {v.model} {v.generation}</strong>
-          <div class="meta">
-            {v.years} · {v.market}{#if v.platformFamily}
-              · {v.platformFamily}{/if}
-          </div>
-          <p>{v.notes}</p>
-        </article>
+        <VehicleCard vehicle={v} partCount={partCounts[v.id]} />
       {/each}
     </div>
   </section>

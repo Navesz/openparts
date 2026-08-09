@@ -49,6 +49,13 @@ describe('Vectra alpha catalog', () => {
     expect(hit?.applications.some((v) => v.model === 'Prisma')).toBe(true);
   });
 
+  it('lists parts for a Vectra B vehicle id', () => {
+    const doc = loadFixture();
+    const parts = doc.parts.filter((p) => p.fitsVehicleIds.includes('vectra-b-br'));
+    expect(parts.length).toBeGreaterThan(5);
+    expect(parts.every((p) => p.code.startsWith('SYN-'))).toBe(true);
+  });
+
   it('surfaces do-not-advise brake equivalence instead of silent success', () => {
     const index = loadIndex(loadFixture());
     const result = index.search('SYN-VB-BRAKE-F-01');
