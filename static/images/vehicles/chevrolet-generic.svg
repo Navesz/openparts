@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 280" role="img" aria-label="Silhueta Chevrolet generica">
-  <rect width="640" height="280" fill="#f3efe6"/>
-  <ellipse cx="320" cy="230" rx="240" ry="16" fill="#c9d2cb" opacity=".7"/>
-  <path d="M80 185 C130 130 190 105 260 98 L400 96 C480 100 530 130 560 170 L580 185 L580 205 C510 214 420 218 320 218 C210 218 120 212 80 200 Z" fill="#b7c9bd" stroke="#073528" stroke-width="3"/>
-  <path d="M230 100 L275 58 L370 56 L415 98" fill="#eef5f0" stroke="#073528" stroke-width="3"/>
-  <circle cx="175" cy="205" r="32" fill="#1c241f"/>
-  <circle cx="465" cy="205" r="32" fill="#1c241f"/>
-  <text x="40" y="40" font-family="Georgia, serif" font-size="26" fill="#073528">Chevrolet</text>
-</svg>

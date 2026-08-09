@@ -15,15 +15,14 @@ next_objective: none ? ask user for next expansion
 - Safety-critical default do-not-advise
 - Do not scrape CepChev/TecDoc/EPC into the repo
 
-## Done this session
+## Done recently
 
-- Batida UX: cï¿½digo ? aplicaï¿½ï¿½es multi-veï¿½culo (Famï¿½lia I/II)
-- Pï¿½ginas `/plataformas/` e `/fontes/` + RESEARCH_SOURCES + PUBLIC_HISTORY
-- Demo live: https://navesz.github.io/openparts/
-- Skip-link + focus-visible a11y
+- Real photos (Commons CC) for hero/vehicles/categories + `/creditos/` + IMAGE_CREDITS
+- Batida UX + Plataformas/Fontes + Family I/II demos
+- Demo: https://navesz.github.io/openparts/
 
 ## Suggested next (only if user asks)
 
-- Montana antiga no fixture Famï¿½lia I
+- Replace Opel stand-ins with more BR-market Chevrolet photos when available
+- Montana antiga no fixture Família I
 - CI workflow com token `workflow`
-- Importador de evidï¿½ncia curada (nï¿½o scrape)

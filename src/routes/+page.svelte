@@ -108,7 +108,7 @@
       <p class="meta">{t.efiNote}</p>
     </div>
     <figure class="hero-figure">
-      <img src={heroImage()} alt="Atmosfera de oficina com sedã estilo Vectra" />
+      <img src={heroImage()} alt="Foto real de Chevrolet Vectra (Commons, ver créditos)" />
     </figure>
   </section>
 

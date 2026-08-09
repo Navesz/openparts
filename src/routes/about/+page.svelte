@@ -11,7 +11,7 @@
       <p class="lede">{t.lede}</p>
     </div>
     <figure class="hero-figure">
-      <img src={heroImage()} alt="Ilustração de oficina Open Parts" />
+      <img src={heroImage()} alt="Foto real de Chevrolet Vectra (Commons, ver créditos)" />
     </figure>
   </section>
 
