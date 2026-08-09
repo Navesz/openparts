@@ -1,7 +1,19 @@
 <script lang="ts">
   import { base } from '$app/paths';
+  import { page } from '$app/stores';
   import { pt } from '$lib/i18n/pt';
   import '../app.css';
+
+  function pathOf(href: string): string {
+    return href.replace(/\/$/, '') || '/';
+  }
+
+  function isActive(href: string): boolean {
+    const current = pathOf($page.url.pathname.replace(base, '') || '/');
+    const target = pathOf(href);
+    if (target === '/') return current === '/' || current === '';
+    return current === target || current.startsWith(`${target}/`);
+  }
 </script>
 
 <svelte:head>
@@ -18,11 +30,11 @@
 <div class="topbar">
   <a class="topbrand" href="{base}/">Open Parts</a>
   <nav aria-label="Principal">
-    <a href="{base}/">{pt.nav.search}</a>
-    <a href="{base}/catalog/">{pt.nav.catalog}</a>
-    <a href="{base}/plataformas/">{pt.nav.platforms}</a>
-    <a href="{base}/fontes/">{pt.nav.sources}</a>
-    <a href="{base}/about/">{pt.nav.about}</a>
+    <a href="{base}/" class:active={isActive('/')}>{pt.nav.search}</a>
+    <a href="{base}/catalog/" class:active={isActive('/catalog')}>{pt.nav.catalog}</a>
+    <a href="{base}/plataformas/" class:active={isActive('/plataformas')}>{pt.nav.platforms}</a>
+    <a href="{base}/fontes/" class:active={isActive('/fontes')}>{pt.nav.sources}</a>
+    <a href="{base}/about/" class:active={isActive('/about')}>{pt.nav.about}</a>
   </nav>
 </div>
 

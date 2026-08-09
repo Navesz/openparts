@@ -356,6 +356,107 @@ button.secondary {
   margin-bottom: 0.5rem;
 }
 
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: end;
+  margin-bottom: 0.85rem;
+}
+
+.section-head h2,
+.panel-title {
+  margin: 0.15rem 0 0;
+  font-family: var(--font-display);
+  color: var(--brand-ink);
+  font-size: 1.65rem;
+}
+
+.vehicles {
+  margin-top: 0.5rem;
+}
+
+.stat-line {
+  font-size: 1.15rem;
+  margin: 0.35rem 0 0.75rem;
+}
+
+.crumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.crumb a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0.75rem 0 1rem;
+}
+
+.chip {
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 0.4rem 0.85rem;
+  font: inherit;
+  font-weight: 600;
+  font-size: 0.92rem;
+  cursor: pointer;
+}
+
+.chip.active,
+.chip:hover {
+  border-color: var(--brand);
+  color: var(--brand-ink);
+  background: rgba(15, 107, 76, 0.08);
+}
+
+.group-title {
+  margin: 1.1rem 0 0.65rem;
+  font-size: 1.05rem;
+  color: var(--brand-ink);
+}
+
+.note-list {
+  padding-left: 1.1rem;
+  margin: 0.5rem 0 0.85rem;
+}
+
+.cat-icon-lg {
+  width: 72px;
+  height: 72px;
+}
+
+.advanced {
+  margin-top: 1.25rem;
+  border-top: 1px solid var(--line);
+  padding-top: 0.85rem;
+}
+
+.advanced summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--brand-ink);
+  margin-bottom: 0.75rem;
+}
+
+.hit header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+
 .cat-icon {
   border-radius: 0.85rem;
   object-fit: cover;
@@ -444,10 +545,17 @@ button.secondary {
   text-decoration: none;
   color: var(--muted);
   font-weight: 600;
+  padding: 0.25rem 0;
+  border-bottom: 2px solid transparent;
 }
 
-.topbar nav a:hover {
+.topbar nav a:hover,
+.topbar nav a.active {
   color: var(--brand-ink);
+}
+
+.topbar nav a.active {
+  border-bottom-color: var(--brand);
 }
 
 .site-footer {

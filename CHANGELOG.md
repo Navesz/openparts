@@ -4,6 +4,7 @@
 
 ### Added
 
+- Home prioriza escolha do carro; página do veículo com filtro por categoria e irmãos de plataforma
 - Fotos reais (Wikimedia Commons) + página `/veiculo/[id]/` (clique no carro → peças)
 - Batida de peças: aplicações multi-veículo (também clicáveis) nos resultados
 - Catálogo Família I / Família II (sintético) + demos `SYN-FAMILY2-OIL-01` / `SYN-FAMILY1-THERMO-01`

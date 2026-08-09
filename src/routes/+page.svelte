@@ -105,13 +105,17 @@
     return `${base}/veiculo/${id}/`;
   }
 
+  function relatedHref(code: string): string {
+    return `${base}/?${new URLSearchParams({ code }).toString()}`;
+  }
+
   onMount(() => {
     const params = new URLSearchParams(window.location.search);
     const code = params.get('code');
     const vehicle = params.get('vehicle');
     if (code) query = code;
     if (vehicle) vehicleId = vehicle;
-    if (code || vehicle) search();
+    search();
   });
 
   search();
@@ -124,14 +128,30 @@
       <h1 class="brand">{t.title}</h1>
       <p class="lede">{t.lede}</p>
       <div class="banner" role="note">{t.banner}</div>
-      <p class="meta">{t.efiNote}</p>
     </div>
     <figure class="hero-figure">
       <img src={heroImage()} alt="Foto real de Chevrolet Vectra (Commons, ver créditos)" />
     </figure>
   </section>
 
-  <section class="panel">
+  <section class="vehicles" id="carros">
+    <div class="section-head">
+      <div>
+        <p class="meta mono">{t.startHere}</p>
+        <h2>{t.vehiclesHeading}</h2>
+        <p class="meta">{t.clickVehicle}</p>
+      </div>
+    </div>
+    <div class="vehicle-grid">
+      {#each vehicles as v}
+        <VehicleCard vehicle={v} partCount={partCounts[v.id]} />
+      {/each}
+    </div>
+  </section>
+
+  <section class="panel" id="busca" style="margin-top:1.25rem;">
+    <p class="meta mono">{t.orSearch}</p>
+    <h2 class="panel-title">{t.codeLabel}</h2>
     <form
       class="controls"
       onsubmit={(e) => {
@@ -145,7 +165,12 @@
       </label>
       <label>
         {t.vehicleLabel}
-        <select bind:value={vehicleId}>
+        <select
+          bind:value={vehicleId}
+          onchange={() => {
+            search();
+          }}
+        >
           <option value="">{t.allVehicles}</option>
           {#each vehicles as v}
             <option value={v.id}
@@ -160,28 +185,6 @@
         <button class="secondary" type="button" onclick={resetDemo}>{t.demo}</button>
       </div>
     </form>
-
-    <div class="button-row tools">
-      <button class="secondary" type="button" onclick={tryFamily2}>{t.tryFamily2}</button>
-      <button class="secondary" type="button" onclick={tryFamily1}>{t.tryFamily1}</button>
-      <button class="secondary" type="button" onclick={tryFamily1O2}>{t.tryFamily1O2}</button>
-      <button class="secondary" type="button" onclick={tryUnknown}>{t.probeUnknown}</button>
-      <button class="secondary" type="button" onclick={tryBrake}>{t.probeBrake}</button>
-      <button class="secondary" type="button" onclick={downloadProject}>{t.saveProject}</button>
-      <label class="file-btn secondary">
-        {t.loadProject}
-        <input type="file" accept=".json,application/json" onchange={onImport} />
-      </label>
-    </div>
-
-    <label class="notes">
-      {t.notesLabel}
-      <textarea bind:value={notes} rows="3" placeholder={t.notesPlaceholder}></textarea>
-    </label>
-
-    {#if fileMessage}
-      <p class="meta">{fileMessage}</p>
-    {/if}
 
     {#if result}
       <div class="results" aria-live="polite">
@@ -207,11 +210,11 @@
         {#each result.hits as hit}
           <article class="hit hit-media" class:hit-blocked={hit.confidence === 'do-not-advise'}>
             <img
-              class="cat-icon"
+              class="cat-icon cat-icon-lg"
               src={categoryImage(hit.part.category)}
               alt=""
-              width="56"
-              height="56"
+              width="72"
+              height="72"
             />
             <div>
               <header>
@@ -252,7 +255,11 @@
                 </div>
               {/if}
               {#if hit.relatedPart}
-                <p class="meta">{t.relatedTo} <span class="mono">{hit.relatedPart.code}</span></p>
+                <p class="meta">
+                  {t.relatedTo}
+                  <a class="mono" href={relatedHref(hit.relatedPart.code)}>{hit.relatedPart.code}</a
+                  >
+                </p>
               {/if}
               {#if hit.provenance}
                 <p class="meta">
@@ -274,15 +281,29 @@
         {/each}
       </div>
     {/if}
-  </section>
 
-  <section class="vehicles">
-    <h2>{t.vehiclesHeading}</h2>
-    <p class="meta">{t.clickVehicle}</p>
-    <div class="vehicle-grid">
-      {#each vehicles as v}
-        <VehicleCard vehicle={v} partCount={partCounts[v.id]} />
-      {/each}
-    </div>
+    <details class="advanced">
+      <summary>{t.advancedTools}</summary>
+      <p class="meta">{t.efiNote}</p>
+      <div class="button-row tools">
+        <button class="secondary" type="button" onclick={tryFamily2}>{t.tryFamily2}</button>
+        <button class="secondary" type="button" onclick={tryFamily1}>{t.tryFamily1}</button>
+        <button class="secondary" type="button" onclick={tryFamily1O2}>{t.tryFamily1O2}</button>
+        <button class="secondary" type="button" onclick={tryUnknown}>{t.probeUnknown}</button>
+        <button class="secondary" type="button" onclick={tryBrake}>{t.probeBrake}</button>
+        <button class="secondary" type="button" onclick={downloadProject}>{t.saveProject}</button>
+        <label class="file-btn secondary">
+          {t.loadProject}
+          <input type="file" accept=".json,application/json" onchange={onImport} />
+        </label>
+      </div>
+      <label class="notes">
+        {t.notesLabel}
+        <textarea bind:value={notes} rows="3" placeholder={t.notesPlaceholder}></textarea>
+      </label>
+      {#if fileMessage}
+        <p class="meta">{fileMessage}</p>
+      {/if}
+    </details>
   </section>
 </main>
