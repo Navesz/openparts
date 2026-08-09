@@ -17,12 +17,12 @@ next_objective: none ? ask user for next expansion
 
 ## Done recently
 
-- Real photos (Commons CC) for hero/vehicles/categories + `/creditos/` + IMAGE_CREDITS
-- Batida UX + Plataformas/Fontes + Family I/II demos
-- Demo: https://navesz.github.io/openparts/
+- Click vehicle ? `/veiculo/[id]/` parts list; part ? search `?code=`
+- Real Commons photos + créditos
+- Batida multi-veículo + Família I/II
 
 ## Suggested next (only if user asks)
 
-- Replace Opel stand-ins with more BR-market Chevrolet photos when available
-- Montana antiga no fixture Família I
-- CI workflow com token `workflow`
+- More BR-market Chevrolet photos
+- Montana antiga Família I
+- CI workflow scope
