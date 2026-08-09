@@ -45,7 +45,10 @@ export const pt = {
     source: 'fonte',
     applications: 'Aplicações neste catálogo',
     vehiclesHeading: 'Escolha um carro para ver as peças',
-    clickVehicle: 'Clique no carro para ver as peças do fixture',
+    clickVehicle: 'Comece pelo carro — depois abra uma peça na busca para ver equivalências.',
+    advancedTools: 'Ferramentas avançadas (demos, notas, .oparts.json)',
+    startHere: 'Comece aqui',
+    orSearch: 'Ou busque por código',
     downloaded: 'Arquivo .oparts.json baixado.',
     loadedAt: 'Projeto carregado em',
     importFail: 'Falha ao importar o projeto'
@@ -103,13 +106,19 @@ export const pt = {
     banner:
       'Lista educacional do catálogo demo. Clique numa peça para abrir a busca com equivalências e confiança. Não é EPC GM.',
     partsHeading: 'Peças neste fixture',
+    filterAll: 'Todas',
+    filterLabel: 'Filtrar por categoria',
     noParts: 'Nenhuma peça listada para este veículo no alpha.',
+    noFilterMatch: 'Nenhuma peça nesta categoria para este carro.',
     openInSearch: 'Abrir na busca →',
+    sharedWith: 'Também no fixture',
+    siblingsHeading: 'Mesma plataforma neste alpha',
     sourcesHeading: 'Fontes / proveniência do veículo',
     sourceLink: 'abrir',
     backSearch: 'Voltar à busca',
     backPlatforms: 'Plataformas',
-    notFound: 'Veículo não encontrado neste fixture alpha.'
+    notFound: 'Veículo não encontrado neste fixture alpha.',
+    partCount: 'peças no fixture'
   }
 } as const;
 
